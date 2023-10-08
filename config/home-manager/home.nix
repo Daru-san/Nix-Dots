@@ -130,6 +130,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".icons/default".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
+    # "~/.config/ranger/rc.conf".source = "~/Nix-Dots/config/ranger/rc.conf";
     # ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
     # ".config/neofetch/config.conf".source = "neofetch/config.conf";
     # ".config/neofetch/anifetch.conf".source = "neofetch/anifetch.conf";
