@@ -1,7 +1,7 @@
 {config, pkgs, ...}: {
   programs.kitty = {
     enable = true;
-    theme = "VSCode_Dark";
+    theme = "Night_Owl";
     font = {
       name = "Jetbrains Mono Nerd Font";
       size = 12;
