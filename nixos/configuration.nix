@@ -7,32 +7,36 @@
       ./hardware-configuration.nix
     ];
 
- #tlp
+  #TLP for power and performance tweaks
   services.tlp.enable = true;
   services.power-profiles-daemon.enable = false;
- # Hyprland
+  #Performance tweaks
+  powerManagement = {
+  	enable = true;
+	cpuFreqGovernor = "performance";
+  };
+
+  #Hyprland
   programs.hyprland.enable = true;
+
   # Flatpak
   services.flatpak.enable = true;
-  #ZSH
+
+  #ZSH config
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #for sway and swaylock
+  #For Sway and Swaylock
   security.polkit.enable = true;
   security.pam.services.swaylock.text = ''
     auth include login
   '';
-	
-	#performance
-  powerManagement = {
-  	enable = true;
-	  cpuFreqGovernor = "performance";
-  };
+
   networking.hostName = "AspireNixRemux"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -46,6 +50,7 @@
     nameservers = ["1.1.1.1" "1.0.0.1"];
     networkmanager.dns = "none";
   };
+  #Bluetooth configuration
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
 
@@ -57,7 +62,7 @@
   i18n.defaultLocale = "en_ZA.UTF-8";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = false;
@@ -65,24 +70,8 @@
   programs.gnome-disks.enable = true;
   
   #KDE
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-  #programs.plasma-discover.enable = true;
-
-#  environment.gnome.excludePackages = (with pkgs; [
-#  gnome-photos
-#  gnome-tour
-#  gnome-terminal
-#  epiphany
-#  gedit
-#  geary
-#  evince
-#  tali
-#  iagno
-#
-#	]) ++ (with pkgs.gnome; #[
-#  cheese # webcam tool
-#	]);
+  services.xserver.displayManager.sddm.enable = false;
+  services.xserver.desktopManager.plasma5.enable = false;
 
   # Configure keymap in X11
   services.xserver = {
@@ -113,10 +102,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Enable adb, android FTP and waydroid.
   programs.adb.enable = true;
   services.gvfs.enable = true;
+  virtualisation.waydroid.enable = true;
 
+  #User configs
   users.users = {
     daru = {
       isNormalUser = true;
@@ -124,28 +115,12 @@
       extraGroups = [ "networkmanager" "wheel" "video" "adbusers"];
       packages = with pkgs; [
        firefox
-#      swayosd
- #     waybar
-  #    kitty
-   #   htop
-    #  rofi
-    #  swaybg
-    #  hyprpicker
-    #  swayidle
-    #  cmus
-     # cava
-     # tty-clock
-     # playerctl
-     # thunderbird
       ];
     };
+    #Disables root user
     root.hashedPassword = "!";
     # mutableUsers = false;
   };
-#  fonts.fonts = with pkgs;[
-
-# (nerdfonts.override { fonts = [ "JetBrainsMono" "RobotoMono" ]; })
-#  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -153,11 +128,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [    
-    neovim
     neofetch
     ranger
-    distrobox
-    podman
     killall
     htop
     most
@@ -166,19 +138,12 @@
     gparted
     gnome.gnome-software
     gnome3.nautilus
-#    libsForQt5.plasma-disks
-   discover
-#    partition-manager
-#    gnome3.gnome-disks
-#    kde.discover
-#   gnome3.disks
+    discover
     ncdu
-#    nautilus
-    #cpupower
     cpupower-gui
     pavucontrol
     pulsemixer
-    gnome3.gnome-tweaks
+    #gnome3.gnome-tweaks
     wget
     jmtpfs
     nix-prefetch-git
@@ -188,9 +153,9 @@
     unzip
     clang
     zig
-
-   # (python312.withPackages(ps: with ps; [pygments requests]))
   ];
+
+  #Neovim config
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -230,7 +195,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "unstable"; # Did you read the comment?
 
-  ##Systemd
+  #KDE polkit for hyprland
   systemd = {
   user.services.polkit-kde-agent = {
     description = "kde polkit";
