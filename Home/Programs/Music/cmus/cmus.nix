@@ -1,5 +1,5 @@
 {config, pkgs, ...}:{
-  home.packages = with pgks; [
+  home.packages = with pkgs; [
     cmus
   ];
 }

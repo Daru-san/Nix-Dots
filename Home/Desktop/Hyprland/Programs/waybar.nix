@@ -1,4 +1,8 @@
-{config, pkgs, ...}:{
+{config, pkgs, ...}:
+let
+  rofi-bluetooth = "${pkgs.rofi-bluetooth}/bin/rofi-bluetooth";
+  # rofi-wifi-menu = "./r"
+in {
     imports = [
       ./waybar-style.nix
     ];
@@ -180,7 +184,7 @@
             format-connected = "󰂱";
             tooltip-format = "{status}: {num_connections} devices connected";
             tooltip = true;
-            on-click = "rofi-bluetooth";
+            on-click = "$(rofi-bluetooth)";
           };
       }
     ];

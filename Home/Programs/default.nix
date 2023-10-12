@@ -1,10 +1,10 @@
-{config, pkgs, ...}:{
+{config, pkgs, lib, ...}:{
   imports = [
     ./cli/default.nix
     ./Music/default.nix
-    ./Browser/default.nix
-    ./Games/default.nix
+    # ./Games/default.nix
     ./coding/default.nix
+    ./Browser/default.nix
   ];
   home.packages = with pkgs; [
     libreoffice-fresh

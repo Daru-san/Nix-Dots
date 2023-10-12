@@ -4,4 +4,7 @@
     ./Programs/default.nix
     ./Settings/default.nix
   ];
+  home.stateVersion = "23.11";
+  home.username = "daru";
+  home.homeDirectory = "/home/daru";
 }

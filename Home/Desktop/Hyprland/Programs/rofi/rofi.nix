@@ -1,4 +1,4 @@
-{config, pkgs, ...}:{
+{config, pkgs,lib, ...}:{
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
@@ -24,5 +24,5 @@
     rofi-screenshot
     rofi-power-menu
   ];
-  home.file.".config/rofi/colors".source = "./Themes/colors";
+  home.file.".config/rofi/colors".source = config.lib.file.mkOutOfStoreSymlink ./Themes/colors;
 }

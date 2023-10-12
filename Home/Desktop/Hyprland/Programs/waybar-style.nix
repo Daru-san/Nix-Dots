@@ -1,5 +1,5 @@
-{config, pkgs, ...}:{
-  home.file.".config/waybar/waybar-theme.css".source = "../Themes/Waybar/waybar-theme.css";
+{config, pkgs, lib, ...}:{
+  home.file.".config/waybar/waybar-theme.css".source = config.lib.file.mkOutOfStoreSymlink ../Themes/Waybar/waybar-theme.css;
   programs.waybar.style = ''
   @import "waybar-theme.css";
 * {

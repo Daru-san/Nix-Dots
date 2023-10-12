@@ -16,6 +16,6 @@
   ];
   home.sessionVariables = {
     TERMINAL = "${config.programs.kitty.package}/bin/kitty";
-    EDITOR = "${config.programs.nvim.package}/bin/nvim";
+    # EDITOR = "${config.programs.neovim.package}/bin/nvim";
   };
 }

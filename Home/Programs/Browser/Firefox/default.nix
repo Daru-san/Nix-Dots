@@ -19,27 +19,18 @@
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = [ "@nw" ];
             };
-            "NixOS Wiki" = {
-              urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-              iconUpdateURL = "https://nixos.wiki/favicon.png";
-              updateInterval = 24 * 60 * 60 * 1000; # every day
-              definedAliases = [ "@nw" ];
-            };
             "Brave Search" = {
               urls = [
               {template = "https://search.brave.com/search?q={searchTerms}";}
               ];
-              iconUpdateURL = "https://cdn.search.brave.com/serp/v2/_app/immutable/assets/brave-logo-dark.62301cdf.svg"
-              updateInterval 24 * 60 * 60 * 1000;
+              iconUpdateURL = "https://cdn.search.brave.com/serp/v2/_app/immutable/assets/brave-logo-dark.62301cdf.svg";
+              updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@br"];
             };
           };
         };
         settings = {
           "browser.disableResetPrompt" = true;
-          "browser.download.panel.shown" = true;
-          "browser.download.useDownloadDir" = false;
-          "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           "browser.shell.checkDefaultBrowser" = false;
           "browser.shell.defaultBrowserCheckCount" = 1;
           "dom.security.https_only_mode" = true;

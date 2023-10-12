@@ -1,7 +1,9 @@
 ##Global shell configuration##
 {config, pkgs, ...}:{
-  imports = ./zsh/zsh.nix;
-  imports = ./bash/bash.nix;
+  imports = [ 
+  ./zsh/zsh.nix
+  ./bash/bash.nix 
+  ];
 
   #Global shell aliases
   home.shellAliases = {
@@ -27,5 +29,6 @@
     anifetch = "neofetch --config ~/.config/neofetch/anifetch.conf";
     img = "kitten icat --hold";
     r = "ranger";
-  }
+    home-flake = "home-manager switch --flake ~/Nix-Dots/flake.nix";
+  };
 }

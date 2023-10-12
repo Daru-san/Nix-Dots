@@ -35,7 +35,7 @@
     ];
 
     # not these though
-    # stateVersion = "unstable";
+    stateVersion = "unstable";
   in {
     packages = genSystems (system: {
       homeConfigurations.${homeConfigUserString} = home-manager.lib.homeManagerConfiguration {
