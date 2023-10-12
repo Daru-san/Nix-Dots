@@ -1,4 +1,5 @@
 {config, pkgs, ...}:{
+  home.file.".config/waybar/waybar-theme.css".source = "../Themes/Waybar/waybar-theme.css";
   programs.waybar.style = ''
   @import "waybar-theme.css";
 * {

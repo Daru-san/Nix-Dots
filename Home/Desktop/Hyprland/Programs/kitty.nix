@@ -25,7 +25,18 @@
       cursor_blink_interval = 1;
       cursor_stop_blinking_after = 15;
       scrollback_lines = 100000;
-      scrollback_pager = "~/Scripts/kitty-scroll.sh";
+      scrollback_pager = "kitty-scroll";
     };
   };
+  # home.file.".kitty-scroll.sh".text = ''
+  #   #!/bin/sh
+  #   nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent! write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
+  #   
+  # '';
+#Script for scrolling
+  home.packages = with pkgs; [
+        (pkgs.writeShellScriptBin "kitty-scroll" ''
+         nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent! write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
+     '')
+  ];
 }

@@ -12,15 +12,21 @@
         imports = extra.conf
       '';
       settings = {
-        general = {
+        general = let
+          base = "111413";
+          green = "51a281";
+          base2 = "111113";
+          mantle = "182825";
+          crust = "1e2e2e";
+        in  {
           gaps_in = 5;
           gaps_out = 10;
           border_size = 2.7;
           cursor_inactive_timeout = 4;
-          "col.active_border" = "0xff${config.colorscheme.colors.base0C}";
-          "col.inactive_border" = "0xff${config.colorscheme.colors.base02}";
-          "col.group_border_active" = "0xff${config.colorscheme.colors.base0B}";
-          "col.group_border" = "0xff${config.colorscheme.colors.base04}";
+          "col.active_border" = "0xff${green} 0xff{base2}";
+          "col.inactive_border" = "0xff${base}";
+          # "col.group_border_active" = "0xff${config.colorscheme.colors.base0B}";
+          # "col.group_border" = "0xff${config.colorscheme.colors.base04}";
           layout = "master";
         };
         input = {
@@ -72,9 +78,12 @@
             "fade, 1, 7, myBezier"
           ];
         };
-        exec = [
+        exec = 
+        let
+          wallpaper = "../../Wallpapers/current"
+        in [
           "${pkgs.swww}/bin/swww init"
-          "${pkgs.swww}/bin/swww img ${config.wallpaper}"
+          "${pkgs.swww}/bin/swww img ${wallpaper}"
         ];
               bind = let
         swayosd = "${pkgs.swayosd}/bin/swaylock";
