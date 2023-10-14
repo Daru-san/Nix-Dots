@@ -1,4 +1,4 @@
-{pkgs, lib, config, ...}: {
+{pkgs, lib, config, ...}:{
   home.file.".mozilla/firefox/daru/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
   programs.firefox = {
     enable = true;
@@ -6,9 +6,42 @@
     profiles = {
       daru = {
         name = "daruFox";
-        extensions = [
-        
-        ];
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          behave
+          boring-rss
+          cliget
+          decentraleyes
+          disable-javascript
+          edit-with-emacs
+          don-t-fuck-with-paste
+          disconnect
+          enhanced-github
+          enhancer-for-youtube
+          firefox-color
+          violentmonkey
+          firenvim
+          github-file-icons
+          gitako-github-file-tree
+          i-dont-care-about-cookies
+          hover-zoom-plus
+          image-search-options
+          keepassxc-browser
+          multi-account-containers
+          no-pdf-download
+          re-enable-right-click
+          simplelogin
+          skip-redirect
+          sponsorblock
+          stylus
+          terms-of-service-didnt-read
+          temporary-containers
+          translate-web-pages
+          ublock-origin
+          unpaywall
+          web-archives
+          widegithub
+          tabcenter-reborn
+          ];
         isDefault = true;
         search = {
           default = "Brave Search";
@@ -27,6 +60,17 @@
               iconUpdateURL = "https://cdn.search.brave.com/serp/v2/_app/immutable/assets/brave-logo-dark.62301cdf.svg";
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@br"];
+            };
+            "Nix Packages" = {
+              urls = [{
+                template = "https://search.nixos.org/packages";
+                params = [
+                  { name = "type"; value = "packages"; }
+                  { name = "query"; value = "{searchTerms}"; }
+                  ];
+               }];
+             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@np" ];
             };
           };
         };

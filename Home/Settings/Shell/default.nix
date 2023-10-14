@@ -10,7 +10,7 @@
     g = "git";
     ll = "ls -l";
     update = "sudo nixos-rebuild switch";
-    homeswitch = "home-manager switch";
+    home-switch = "home-manager switch";
     nvhome = "nvim ~/.config/home-manager/home.nix";
     ex = "exit";
     cat = "ccat";    
@@ -29,6 +29,6 @@
     anifetch = "neofetch --config ~/.config/neofetch/anifetch.conf";
     img = "kitten icat --hold";
     r = "ranger";
-    home-flake = "home-manager switch --flake ~/Nix-Dots/flake.nix";
+    home-flake = "home-manager switch --flake ~/Nix-Dots/flake.nix --impure";
   };
 }

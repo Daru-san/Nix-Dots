@@ -18,13 +18,13 @@ in {
     ];
 
     bind = [
-      "SUPERSHIFT,q,killactive"
+      "alt,q,killactive"
       "SUPERSHIFT,e,exit"
 
       "SUPER,s,togglesplit"
-      "SUPER,f,fullscreen,1"
-      "SUPERSHIFT,f,fullscreen,0"
-      "SUPERSHIFT,space,togglefloating"
+      "SUPER,f,fullscreen"
+      # "SUPERSHIFT,f,fullscreen,0"
+      "SUPERSHIFT,v,togglefloating"
 
       "SUPER,minus,splitratio,-0.25"
       "SUPERSHIFT,minus,splitratio,-0.3333333"

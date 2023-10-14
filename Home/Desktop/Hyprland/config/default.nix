@@ -82,13 +82,16 @@
         };
         exec = 
         let
-          wallpaper = "~/Wallpapers/current";
+          wallpaper = "~/Wallpapers/images/4k-keyboard.jpg";
         in [
           "${pkgs.swww}/bin/swww init"
           "${pkgs.swww}/bin/swww img ${wallpaper}"
           "${pkgs.swaynotificationcenter}/bin/swaync"
         ];
-              bind = let
+        # exec-once = [
+        #   "waybar"
+        # ];
+        bind = let
         swayosd = "${pkgs.swayosd}/bin/swayosd";
         rofi = "${config.programs.rofi.package}/bin/rofi";
         rofi-bluetooth = "${pkgs.rofi-bluetooth}/bin/rofi-bluetooth";

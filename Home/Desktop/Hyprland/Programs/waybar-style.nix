@@ -103,7 +103,7 @@ button:hover {
 }
 
 
-
+#custom-notification,
 #battery,
 #custom-updates,
 #clock,
@@ -129,6 +129,10 @@ button:hover {
     margin-bottom: 4px;
     background-color: @dark3;
     /*border-radius: 2rem 2rem 2rem 2rem;*/
+}
+
+#custom-notification {
+    border-radius: 2rem 2rem 2rem 2rem;
 }
 
 #clock{

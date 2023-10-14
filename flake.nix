@@ -2,6 +2,7 @@
   description = "My home-manager configuration";
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+    nur.url = "github:nix-community/NUR";
     spicetify-nix.url = github:the-argus/spicetify-nix;
     home-manager = {
       url = github:nix-community/home-manager;
@@ -16,7 +17,9 @@
     nixpkgs,
     home-manager,
     spicetify-nix,
-    hyprland, ...
+    hyprland,
+    nur,
+    ...
   } @ inputs: let
     username = "daru";
 
@@ -31,6 +34,7 @@
     modules = [
         hyprland.homeManagerModules.default
         {wayland.windowManager.hyprland.enable = true;}
+        {nixpkgs.overlays = [ nur.overlay ];}
         # ...
     ];
 
@@ -42,6 +46,7 @@
         pkgs = pkgs.${system};
         modules = [
             ./Home/default.nix
+            {nixpkgs.overlays = [ nur.overlay ];}
             ];
         extraSpecialArgs =
           inputs

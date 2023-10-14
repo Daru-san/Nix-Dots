@@ -3,8 +3,7 @@
     swww
   ];
   home.file."Wallpapers" = {
-    # don't make the directory read only so that impure melpa can still happen
-    # for now
+
     recursive = true;
     source = pkgs.fetchFromGitHub {
       owner = "D3Ext";

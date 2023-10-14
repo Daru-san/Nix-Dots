@@ -34,7 +34,7 @@ in {
         output = "HDMI-A-1";
         modules-left = ["sway/workspaces" "hyprland/workspaces" "sway/language" "sway/mode" "sway/scratchpad" "keyboard-state"];
         modules-center = ["clock"];
-        modules-right = ["pulseaudio" "network" "bluetooth" "battery" "cpu" "memory" "tray"];
+        modules-right = ["pulseaudio" "network" "bluetooth" "battery" "cpu" "memory" "tray" "custom/notification"];
           "hyprland/workspaces" = {
               format = "{icon}";
               format-icons = {
@@ -186,6 +186,27 @@ in {
             tooltip = true;
             on-click = "$(rofi-bluetooth)";
           };
+        "custom/notification" = {
+          tooltip = true;
+          tooltip-format = "{}";
+          format = "{icon}";
+          format-icons = {
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
       }
     ];
   };
