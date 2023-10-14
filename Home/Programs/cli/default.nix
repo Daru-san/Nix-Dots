@@ -22,5 +22,6 @@
       speedtest-cli #Internet speed test
       lynx #Terminal browser
       w3m #Also a terminal browser and terminal image viewer
+      chroma    
     ];
   }

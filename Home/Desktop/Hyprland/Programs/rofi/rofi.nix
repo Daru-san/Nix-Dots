@@ -1,4 +1,7 @@
-{config, pkgs,lib, ...}:{
+{config, pkgs,lib, ...}:
+let
+  style = "./Themes/Styles/type-1/style-6.rasi";
+in {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
@@ -13,7 +16,7 @@
     ];
     font = "Jetbrains Mono Nerd Font 14";
     terminal = "${pkgs.kitty}/bin/kitty";
-    theme = "./Themes/Styles/type-1/style-6.rasi";
+    theme = "${style}";
     extraConfig = {
       modes = ["drun" "run" "window" "files" "calc" "top"];
     };
@@ -25,4 +28,6 @@
     rofi-power-menu
   ];
   home.file.".config/rofi/colors".source = config.lib.file.mkOutOfStoreSymlink ./Themes/colors;
+  home.file.".config/rofi/Themes".source = config.lib.file.mkOutOfStoreSymlink ./Themes;
+  # home.file.".config/rofi/styles".source
 }

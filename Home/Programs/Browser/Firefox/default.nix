@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{pkgs, lib, config, ...}: {
+  home.file.".mozilla/firefox/daru/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
