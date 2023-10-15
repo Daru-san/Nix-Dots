@@ -63,9 +63,11 @@ $mantle    = 0xff181825
 $crust     = 0xff11111b
   '';
   home.file.".config/hypr/colors.conf".text = ''
+  general {
     col.active_border = $green $sapphire $crust
     col.inactive_border = $crustAlpha
     # col.group_border_active = $red $violet 
     # col.group_border = $rosewater
+  }
   '';
 }
