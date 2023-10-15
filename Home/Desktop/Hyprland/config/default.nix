@@ -11,25 +11,21 @@
         enable = true;
       };
       extraConfig = ''
-        source = extra.conf
-        exec-once = waybar
+        # source = extra.conf
+        # exec-once = waybar
       '';
       settings = {
-        general = let
-          base = "111413";
-          green = "51a281";
-          base2 = "111113";
-          mantle = "182825";
-          crust = "1e2e2e";
-        in  {
+        source = [
+          "extra.conf"
+          "colors"
+          "colors.conf"
+        ];
+        general =  {
           gaps_in = 5;
           gaps_out = 10;
           border_size = 2.7;
           cursor_inactive_timeout = 4;
-          "col.active_border" = "0xff${green} 0xff${base2}";
-          "col.inactive_border" = "0xff${base}";
-          # "col.group_border_active" = "0xff${config.colorscheme.colors.base0B}";
-          # "col.group_border" = "0xff${config.colorscheme.colors.base04}";
+
           layout = "master";
         };
         input = {
@@ -56,7 +52,7 @@
           drop_shadow = true;
           shadow_range = 7;
           shadow_render_power = 6;
- #         col.shadow = "0xff${green}";
+          # col.shadow = "$sky";
         };
         animations = {
           enabled = true;
@@ -88,34 +84,42 @@
           "${pkgs.swww}/bin/swww img ${wallpaper}"
           "${pkgs.swaynotificationcenter}/bin/swaync"
         ];
-        # exec-once = [
-        #   "waybar"
-        # ];
+        exec-once = [
+          "${config.programs.waybar.package}/bin/waybar"
+          "${config.programs.kitty.package}/bin/kitty"
+        ];
         bind = let
-        swayosd = "${pkgs.swayosd}/bin/swayosd";
+        swayosd = "${config.services.swayosd.package}/bin/swayosd";
         rofi = "${config.programs.rofi.package}/bin/rofi";
         rofi-bluetooth = "${pkgs.rofi-bluetooth}/bin/rofi-bluetooth";
         playerctl = "${config.services.playerctld.package}/bin/playerctl";
         playerctld = "${config.services.playerctld.package}/bin/playerctld";
-        terminal = config.home.sessionVariables.TERMINAL;
+        terminal = "${config.programs.kitty.package}/bin/kitty";
         browser = "${config.programs.firefox.package}/bin/firefox";
         file-manager = "${pkgs.gnome3.nautilus}/bin/nautilus";
+        shotman = "${pkgs.shotman}/bin/shotman";
+        power-menu = "~/.config/rofi/Scrips/powermenu.sh";
       in [
         #Basic binds
         "SUPER,space,exec, ${rofi} -show drun"
         "SUPER, Return, exec, ${terminal}"
         "SUPER, e, exec, ${file-manager}"
         "SUPER, b, exec, ${rofi-bluetooth}"
+        "SUPER, x, exec, ${power-menu}"
         # Brightness control (only works if the system has lightd)
-        ",XF86MonBrightnessUp, exec, light -A 10"
-        ",XF86MonBrightnessDown, exec, light -U 10"
+        ",XF86MonBrightnessUp, exec,swayosd --brightness=raise 5"
+        ",XF86MonBrightnessDown, exec,swayosd --brightness=lower 5"
         # Volume
         ",XF86AudioRaiseVolume, exec, ${swayosd} --output-volume=raise 5"
         ",XF86AudioLowerVolume, exec, ${swayosd} --output-volume=lower 5"
         ",XF86AudioMute, exec, ${swayosd} --output-volume=mute-toggle"
 
+        ",caps_lock,exec,${swayosd} --caps-lock"
+
+
         # Screenshotting
-        # " Print exec grim -s${"
+        ",Print,exec, ${shotman} --capture region"
+        "SHIFT, print,exec, ${shotman} --capture output"
       ] ++
 
       (lib.optionals config.services.playerctld.enable [

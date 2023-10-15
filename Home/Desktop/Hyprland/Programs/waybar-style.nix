@@ -1,5 +1,5 @@
 {config, pkgs, lib, ...}:{
-  home.file.".config/waybar/waybar-theme.css".source = config.lib.file.mkOutOfStoreSymlink ../Themes/Waybar/waybar-theme.css;
+
   programs.waybar.style = ''
   @import "waybar-theme.css";
 * {
@@ -125,7 +125,7 @@ button:hover {
 #mpd {
     padding: 0 11px;
     margin-top: 4px;
-    color: @green;
+    color: @teal;
     margin-bottom: 4px;
     background-color: @dark3;
     /*border-radius: 2rem 2rem 2rem 2rem;*/
@@ -135,19 +135,19 @@ button:hover {
     border-radius: 2rem 2rem 2rem 2rem;
 }
 
+#pulseaudio,
 #clock{
-   /*  color:@text1;*/
+    color: @sapphire;
     border-radius: 2rem 2rem 2rem 2rem;
     margin-right:3px;
     margin-left:3px;
 /*    background-color: @light2;*/
 }
-#network,
-#cpu {
+ #cpu {
     margin-left:0px;
- /*   color: @text2;*/
+  /*  color: @text2;*/
     border-radius: 0 0 0 0;
-}
+} 
 
 #bluetooth,
 #memory {
@@ -162,12 +162,26 @@ button:hover {
     border-radius: 0 2rem 2rem 0;
     background-color: @light2;
 }
-#pulseaudio,
+
+#network,
 #battery {
  /*   color: @text2;*/
     border-radius: 2rem 0 0 2rem;
     margin-left:3px;
     margin-right:0px;
+}
+#network,
+#tray,
+#custom-notification,
+#bluetooth {
+  background-color: @deep-blue;
+  color: @sky;
+}
+#memory,
+#cpu,
+#battery {
+/* background-color: @dark-blue;*/
+ color: @sapphire;
 }
 
 @keyframes blink {

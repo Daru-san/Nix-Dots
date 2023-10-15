@@ -1,4 +1,3 @@
-
 { pkgs, lib, spicetify-nix, ... }:
 let
   spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
@@ -46,7 +45,7 @@ in
           };
       };
     };
-    home.packages = with pkgs; [
-      spotify-tui
-    ];
+  home.packages = with pkgs; [
+    spotify-tui
+  ];
 }

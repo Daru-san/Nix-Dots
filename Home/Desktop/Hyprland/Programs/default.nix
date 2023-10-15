@@ -2,6 +2,7 @@
   imports = [
     ./rofi/rofi.nix
     ./kitty.nix
+    ./swayosd.nix
     ./waybar.nix
     ./playerctl.nix
   ];

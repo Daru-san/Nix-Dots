@@ -143,12 +143,12 @@ in {
                  warning = 30;
                  critical = 15;
                };
-             format = "{capacity}% {icon}";
-             format-charging = "{capacity}% {icon}󱐌";
-             format-plugged = "{capacity}%";
+             format = "{icon} {capacity}%";
+             format-charging = "{icon}<small>󱐌</small> {capacity}%";
+             # format-plugged = "{capacity}%";
              format-alt = "{time} {icon}";
              format-good = "󰢞"; # An empty format will hide the module
-             format-full = "󱈏";
+             format-full = "{icon} <i>FULL</i>";
              format-icons = ["󰁺" "󰁼" "󰁿" "󰂁" "󰁹"];
              format-icons-charging = ["󰢜" "󰂇" "󰢝" "󰢞" "󰂋"];
           };
@@ -169,12 +169,12 @@ in {
           };
           "network" = {
             # "interface": "wlp2*", 
-             format-wifi = "󰖩";
+             format-wifi = "󰖩 ";
              format-ethernet = "󰈀";
-             tooltip-format = "Connected to {essid}";
-             format-linked = "{ifname} (No IP) ";
+             tooltip-format = "{essid}({signalStrength}%)";
+             format-linked = "{ifname} (No IP)";
              format-disconnected = "󰖪";
-             on-click = "~/Projects/rofi-wifi-menu/rofi-wifi-menu.sh";
+             # on-click = "~/Projects/rofi-wifi-menu/rofi-wifi-menu.sh";
              # format-alt = "{ifname}: {ipaddr}/{cidr}";
           };
           "bluetooth" = {

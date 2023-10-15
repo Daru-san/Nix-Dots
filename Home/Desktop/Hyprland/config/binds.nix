@@ -24,7 +24,7 @@ in {
       "SUPER,s,togglesplit"
       "SUPER,f,fullscreen"
       # "SUPERSHIFT,f,fullscreen,0"
-      "SUPERSHIFT,v,togglefloating"
+      "SUPER,v,togglefloating"
 
       "SUPER,minus,splitratio,-0.25"
       "SUPERSHIFT,minus,splitratio,-0.3333333"
@@ -39,6 +39,8 @@ in {
 
       "SUPER,u,togglespecialworkspace"
       "SUPERSHIFT,u,movetoworkspace,special"
+
+      "SUPERSHIFT,esc,exec,kitty -T Performance --hold btop"
     ] ++
     # Change workspace
     (map (n:

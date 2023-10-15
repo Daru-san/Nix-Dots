@@ -29,5 +29,6 @@ in {
   ];
   home.file.".config/rofi/colors".source = config.lib.file.mkOutOfStoreSymlink ./Themes/colors;
   home.file.".config/rofi/Themes".source = config.lib.file.mkOutOfStoreSymlink ./Themes;
+  home.file.".config/rofi/Scripts".source = config.lib.file.mkOutOfStoreSymlink ./Scripts;
   # home.file.".config/rofi/styles".source
 }
