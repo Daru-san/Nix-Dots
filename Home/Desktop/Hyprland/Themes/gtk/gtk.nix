@@ -2,7 +2,7 @@
     gtk = {
       enable = true;
       theme = {
-          name = "Fluent-dark-float-blur";
+          name = "Fluent-dark";
           package = pkgs.fluent-gtk-theme;
         };
       iconTheme = {
