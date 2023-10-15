@@ -2,8 +2,8 @@
     gtk = {
       enable = true;
       theme = {
-          name = "Adwaita-dark";
-          # package = pkgs.fluent-gtk-theme;
+          name = "Fluent-dark";
+          package = pkgs.fluent-gtk-theme;
         };
       iconTheme = {
           name = "ePapirus-Dark";
