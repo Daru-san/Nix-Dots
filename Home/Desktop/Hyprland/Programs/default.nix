@@ -8,8 +8,6 @@
   ];
   home.packages = with pkgs; [
     wl-clipboard
-    gnome3.nautilus
-    rabbitvcs
     swaynotificationcenter
     hyprpicker
     cool-retro-term

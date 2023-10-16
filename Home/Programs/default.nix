@@ -12,8 +12,12 @@
     gimp
     wpsoffice
     mission-center
-    libsForQt5.akregator
-    libsForQt5.okular
+    # libsForQt5.akregator
+    newsflash
+    # libsForQt5.okular
+    evince
+    gnome3.nautilus
+    rabbitvcs
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
