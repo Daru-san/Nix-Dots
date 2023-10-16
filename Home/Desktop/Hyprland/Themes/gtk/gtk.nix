@@ -30,6 +30,8 @@
          color-scheme = "prefer-dark";
       };
     };
-
+    home.sessionVariables = {
+      GTK_THEME = "Orchis-Dark";
+    };
     home.file.".icons/default".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
 }
