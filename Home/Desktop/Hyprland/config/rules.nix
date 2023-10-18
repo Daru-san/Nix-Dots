@@ -36,7 +36,7 @@
           "name:F11, rounding:false, decorate:false, gapsin:0, gapsout:0, border:false"
           "name:F12, rounding:false, decorate:false, gapsin:0, gapsout:0, border:false"
         ];
-      }
+      };
     };
   }
 ##workspace guidelines
