@@ -6,7 +6,7 @@
           #Task manager-like window for system monitoring 
           "workspace special,class:(kitty),title:(Performance)"
           "center 1,class:(kitty),title:(Performance)"
-          "workspace special,class(mission-center)"
+          "workspace special,class:(mission-center)"
 
           "workspace F5,class:(kitty),title:(Anime)"
           "workspace F6,class:(kitty),title:(Music)"
@@ -17,16 +17,15 @@
   
         ];
         windowrule = [
-          "workspace F1,class:(firefox)"
-          "workspace F2,class:(obisidian)"
-          "workspace F3,class:(libreoffice)"
-          "workspace F4,class:(nautilus)"
+          "workspace F1,class:^(firefox)"
+          "workspace F2,class:^(obisidian)"
+          "workspace F3,class:^(libreoffice)"
+          "workspace F4,class:^(org.gnome.Nautilus)"
+          "workspace F8,class:^(Spotify)"
+          "workspace F7,class:^(FreeTube)"
 
-          "workspace F8,class:(spotify)"
-          "workspace F7,class:(freetube)"
-
-          "workspace F9,class:(newsflash)"
-          "workspace F10,class:(evince)"
+          "workspace F9,class:^(io.gitlab.news_flash.NewsFlash)"
+          "workspace F10,class:^(evince)"
         ];
         workspace = [
           "1, persistent:true"
