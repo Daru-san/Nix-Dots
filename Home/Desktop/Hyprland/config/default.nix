@@ -4,6 +4,7 @@
     ./binds.nix
     ./tty-init.nix
     ./fonts.nix
+    ./rules.nix
   ];
   wayland.windowManager.hyprland = {
       enable = true;
@@ -87,6 +88,7 @@
         exec-once = [
           "${config.programs.waybar.package}/bin/waybar"
           "${config.programs.kitty.package}/bin/kitty"
+          "${pkgs.cool-retro-term.package}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
         ];
         bind = let
         swayosd = "${config.services.swayosd.package}/bin/swayosd";

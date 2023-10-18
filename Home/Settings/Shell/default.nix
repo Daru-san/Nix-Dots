@@ -30,5 +30,7 @@
     img = "kitten icat --hold";
     r = "ranger";
     home-flake = "home-manager switch --flake ~/Nix-Dots/flake.nix --impure";
+    Anime = "kitty -T Anime --hold ani-cli --rofi";
+    Music = "Kitty -T Music --hold cmus";
   };
 }

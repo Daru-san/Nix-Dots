@@ -18,6 +18,7 @@
     evince
     gnome3.nautilus
     rabbitvcs
+    freetube
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [

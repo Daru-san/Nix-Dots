@@ -16,7 +16,7 @@
         read -p "Quality(e.g 720p): " qt
         read -p "Download the episode(s)(y/n):" d 
         sleep 1
-        if [d = "y"]; 
+        if [[d = "y"]]; 
           then 
            exec ani-cli $anime -d --rofi --$sb ---q $qt -e $ep
           else

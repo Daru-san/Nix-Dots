@@ -40,7 +40,11 @@ in {
       "SUPER,u,togglespecialworkspace"
       "SUPERSHIFT,u,movetoworkspace,special"
 
-      "SUPERSHIFT,esc,exec,kitty -T Performance --hold btop"
+      "CTRLSHIFT,esc,exec,kitty -T Performance --hold btop"
+
+      #Super+tab to move to next workspace and back
+      "SUPER,TAB,workspace,m+1"
+      "SUPERSHIFT,TAB,workspace,m-1"
     ] ++
     # Change workspace
     (map (n:
