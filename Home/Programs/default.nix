@@ -17,6 +17,9 @@
     # libsForQt5.okular
     evince
     gnome3.nautilus
+    nautilus-open-any-terminal
+    gnome.nautilus-python
+    gnome.sushi
     rabbitvcs
     freetube
     komikku
