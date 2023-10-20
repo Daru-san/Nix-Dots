@@ -19,6 +19,7 @@
     gnome3.nautilus
     rabbitvcs
     freetube
+    komikku
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
