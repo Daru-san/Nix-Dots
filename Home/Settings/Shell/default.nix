@@ -32,5 +32,7 @@
     home-flake = "home-manager switch --flake ~/Nix-Dots/flake.nix --impure";
     Anime = "kitty -T Anime --hold ani-cli --rofi";
     Music = "Kitty -T Music --hold cmus";
+    nix-upgrade = "nix-channel --update & nixos-rebuild switch --upgrade-all";
+    nix-upgrade-full = "nixos-rebuild switch --upgrade-all & home-manager switch --flake ~/Nix-Dots/flake.nix --impure";
   };
 }
