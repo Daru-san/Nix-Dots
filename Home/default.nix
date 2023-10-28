@@ -9,3 +9,4 @@
   home.homeDirectory = "/home/daru";
   programs.home-manager.enable = true;
 }
+#####

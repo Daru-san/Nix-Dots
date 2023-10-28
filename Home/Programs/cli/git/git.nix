@@ -10,4 +10,8 @@
       a = "add";
     };
   };
+  home.packages = with pkgs; [
+    gitui
+    lazygit
+  ];
 }
