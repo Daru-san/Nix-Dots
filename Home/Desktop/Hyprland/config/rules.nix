@@ -4,31 +4,31 @@
 
         windowrulev2 = [
           #Task manager-like window for system monitoring 
-          "workspace special,class:(kitty),title:(Performance)"
+          "workspace special:usage,class:(kitty),title:(Performance)"
           "center 1,class:(kitty),title:(Performance)"
-          "workspace special,class:(mission-center)"
+          "workspace special:taskmgr,class:(mission-center)"
 
-          "workspace F5,class:(kitty),title:(Anime)"
-          "workspace F6,class:(kitty),title:(Music)"
+          "workspace name:F5,class:(kitty),title:(Anime)"
+          "workspace name:F6,class:(kitty),title:(Music)"
 
-          "workspace, F11,class:(kitty),title:(Files)"
-          "workspace F12,class:(cool-retro-term),title:(Clock)"
+          "workspace name:F11,class:(kitty),title:(Files)"
+          "workspace name:F12,class:(cool-retro-term),title:(Clock)"
           "fullscreen,class:(cool-retro-term),title:(Clock)"
   
         ];
         windowrule = [
-          "workspace F1,class:^(firefox)"
-          "workspace F2,class:^(obisidian)"
-          "workspace F3,class:^(libreoffice)"
-          "workspace F4,class:^(org.gnome.Nautilus)"
-          "workspace F8,class:^(Spotify)"
-          "workspace F7,class:^(FreeTube)"
+          "workspace name:F1,class:^(firefox)"
+          "workspace name:F2,class:^(obisidian)"
+          "workspace name:F3,class:^(libreoffice)"
+          "workspace name:F4,class:^(org.gnome.Nautilus)"
+          "workspace name:F8,class:^(Spotify)"
+          "workspace name:F7,class:^(FreeTube)"
 
-          "workspace F9,class:^(io.gitlab.news_flash.NewsFlash)"
-          "workspace F10,class:^(evince)"
+          "workspace name:F9,class:^(io.gitlab.news_flash.NewsFlash)"
+          "workspace name:F10,class:^(evince)"
         ];
         workspace = [
-          "1, persistent:true"
+          "name:1, persistent:true"
           "name:F1, default:true, persistent:true"
           "name:F9, rounding:false, decorate:false, gapsin:0, gapsout:0, border:false"
           "name:F10, rounding:false, decorate:false, gapsin:0, gapsout:0, border:false"

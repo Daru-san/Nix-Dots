@@ -41,7 +41,10 @@ in {
       "SUPER,u,togglespecialworkspace"
       "SUPERSHIFT,u,movetoworkspace,special"
 
-      "CTRLSHIFT,esc,exec,kitty -T Performance --hold btop"
+      "SUPERALT,P,togglespecialworkspace,usage"
+      "SUPERCTRL,P,movetoworkspace,usage"
+
+      "SUPERSHIFT,P,exec,kitty -T Performance --hold btop"
 
       #Super+tab to move to next workspace and back
       "SUPER,TAB,workspace,m+1"
