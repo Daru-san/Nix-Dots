@@ -38,6 +38,9 @@ in
         lastfm
         playlistIcons
       ];
+      customApps = with spicePkgs.customApps; [
+        marketplace
+      ];
     };
     #Spotifd for spotify-tui
     services.spotifyd = {
