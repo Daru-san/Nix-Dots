@@ -34,5 +34,6 @@
       calcure
       lf 
       browsh
+      translate-shell
     ];
   }
