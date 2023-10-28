@@ -17,15 +17,15 @@
   
         ];
         windowrule = [
-          "workspace name:F1,class:^(firefox)"
-          "workspace name:F2,class:^(obisidian)"
-          "workspace name:F3,class:^(libreoffice)"
-          "workspace name:F4,class:^(org.gnome.Nautilus)"
-          "workspace name:F8,class:^(Spotify)"
-          "workspace name:F7,class:^(FreeTube)"
+          "workspace name:F1,^(firefox)$"
+          "workspace name:F2,^(obisidian)$"
+          "workspace name:F3,^(libreoffice)$"
+          "workspace name:F4,^(org.gnome.Nautilus)$"
+          "workspace name:F8,^(Spotify)$"
+          "workspace name:F7,^(FreeTube)$"
 
-          "workspace name:F9,class:^(io.gitlab.news_flash.NewsFlash)"
-          "workspace name:F10,class:^(evince)"
+          "workspace name:F9,^(io.gitlab.news_flash.NewsFlash)$"
+          "workspace name:F10,^(evince)$"
         ];
         workspace = [
           "name:1, persistent:true"
