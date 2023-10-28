@@ -38,8 +38,14 @@ in
         lastfm
         playlistIcons
       ];
-      customApps = with spicePkgs.customApps; [
+      enabledCustomApps = with spicePkgs.apps; [
+        new-releases
         marketplace
+        # {
+        #   name = "localFiles";
+        #   src = localFilesSrc;
+        #   appendName = false;
+        # }
       ];
     };
     #Spotifd for spotify-tui
