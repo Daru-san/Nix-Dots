@@ -34,6 +34,9 @@ in
         adblock
         shuffle # shuffle+ (special characters are sanitized out of ext names)
         hidePodcasts
+        h2..
+        lastfm
+        playlistIcons
       ];
     };
     #Spotifd for spotify-tui
