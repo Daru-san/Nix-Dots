@@ -25,7 +25,7 @@
       chroma
       glow
       gping
-      nvtop
+      nvtop-intel
       sysz
       wtf
       nap
