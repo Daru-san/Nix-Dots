@@ -30,7 +30,7 @@
           "workspace special:audio,^(jamesdsp)"
           "float,^(nm-applet)"
           "workspace name:7,^(gthumb)"
-          "workspace special:mink,^(grabber)"
+          "workspace special:mink,^(cr.fr.bionus.Grabber)"
         ];
         workspace = [
           "name:1, persistent:true"
