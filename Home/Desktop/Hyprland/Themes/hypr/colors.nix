@@ -64,7 +64,7 @@ $crust     = 0xff11111b
   '';
   home.file.".config/hypr/colors.conf".text = ''
   general {
-    col.active_border = $sapphire $crust
+    col.active_border = $sapphire $base
     col.inactive_border = $crustAlpha
     col.group_border_active = $red $pink 
     col.group_border = $rosewater

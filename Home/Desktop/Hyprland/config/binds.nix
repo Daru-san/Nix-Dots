@@ -43,7 +43,9 @@ in {
       "SUPERSHIFT,u,movetoworkspace,special"
 
       "SUPERALT,P,togglespecialworkspace,usage"
-      "SUPERCTRL,P,movetoworkspace,usage"
+      # "SUPERCTRL,P,movetoworkspace,usage"
+      
+      "SUPERALT,caps_lock,togglespecialworkspace,mink"
 
       "SUPERSHIFT,P,exec,kitty -T Performance --hold btop"
 
