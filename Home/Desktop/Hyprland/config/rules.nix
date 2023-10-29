@@ -27,6 +27,8 @@
           "workspace name:F9,^(io.gitlab.news_flash.NewsFlash)$"
           "workspace name:F10,^(evince)$"
           "workspace name:8,^(VSCodium)$"
+          "workspace special:audio,^(jamesdsp)"
+          "float,^(nm-applet)"
         ];
         workspace = [
           "name:1, persistent:true"
