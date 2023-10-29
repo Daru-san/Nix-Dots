@@ -35,5 +35,6 @@
       lf 
       browsh
       translate-shell
+      tmux
     ];
   }

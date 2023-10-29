@@ -89,6 +89,7 @@
           "${config.programs.waybar.package}/bin/waybar"
           "${config.programs.kitty.package}/bin/kitty"
           "${pkgs.cool-retro-term}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
+          "${pkgs.jamesdsp}/bin/jamesdsp -t"
         ];
         bind = let
         swayosd = "${config.services.swayosd.package}/bin/swayosd";

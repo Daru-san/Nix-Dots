@@ -11,7 +11,7 @@
 ## style-6   style-7   style-8   style-9   style-10
 
 # Current Theme
-dir="../Themes/Styles/powermenu/type-1"
+dir="~/.config/rofi/Themes/Styles/powermenu/type-1/"
 theme='style-5'
 
 # CMDs

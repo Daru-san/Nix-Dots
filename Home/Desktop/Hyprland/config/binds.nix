@@ -20,6 +20,7 @@ in {
     bind = [
       "alt,q,killactive"
       "SUPERSHIFT,e,exit"
+      "SUPER,x,exec,~/.config/rofi/Scripts/powermenu.sh"
 
       "SUPER,s,togglesplit"
       "SUPER,f,fullscreen"
