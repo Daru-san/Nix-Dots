@@ -1,4 +1,4 @@
-{config, ...}:{
+{config, pkgs, ...}:{
   imports = [
     ./Shell/default.nix
     ./pkgs/default.nix
