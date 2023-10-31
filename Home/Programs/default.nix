@@ -24,6 +24,8 @@
     freetube
     komikku
     gthumb
+    scrcpy
+    localsend
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
