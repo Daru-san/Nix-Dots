@@ -96,8 +96,8 @@ in {
              icon-size = 21;
           };
           "clock" = {
-             format = " {:%R}";
-             format-alt = " {:%A %d %B %T}";
+             format-alt = " {:%R}";
+             format = " {:%A %d %B %T}";
              interval = 1;
              tooltip-format = "<tt><small>{calendar}</small></tt>";
              calendar = {
