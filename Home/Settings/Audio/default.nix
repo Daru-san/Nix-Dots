@@ -1,5 +1,5 @@
 {config, pkgs, ...}:{
   home.packages = with pkgs; [
-    jamesdsp
+    easyeffects
   ];
 }

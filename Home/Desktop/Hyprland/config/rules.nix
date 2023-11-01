@@ -27,7 +27,7 @@
           "workspace name:F9,^(io.gitlab.news_flash.NewsFlash)$"
           "workspace name:F10,^(evince)$"
           "workspace name:8,^(VSCodium)$"
-          "workspace special:audio,^(jamesdsp)"
+          "workspace special:audio,^(easyeffects)"
           "float,^(nm-applet)"
           "workspace name:7,^(gthumb)"
           "workspace special:mink,^(cr.fr.bionus.Grabber)"
