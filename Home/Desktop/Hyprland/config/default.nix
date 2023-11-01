@@ -6,13 +6,13 @@
     ./fonts.nix
     ./rules.nix
   ];
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
       # enable = true;
       systemd = {
         enable = true;
       };
-      package = pkgs.hyprland;
+      # package = pkgs.hyprland;
       extraConfig = ''
         # source = extra.conf
         # exec-once = waybar
@@ -38,7 +38,7 @@
           touchpad = {
             natural_scroll = true;
             disable_while_typing = true;
-          };
+         };
         };
         master = {
           new_is_master = false;
