@@ -11,6 +11,7 @@
       systemd = {
         enable = true;
       };
+      package = pkgs.hyprland;
       extraConfig = ''
         # source = extra.conf
         # exec-once = waybar
