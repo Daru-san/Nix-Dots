@@ -139,6 +139,9 @@
         "ALT,XF86AudioPlay,exec,systemctl --user restart playerctld"
       ]);
     };
-  }; 
+  };
+  home.packages = with pkgs; [
+    hyprland
+  ];
 }
 
