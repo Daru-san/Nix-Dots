@@ -8,7 +8,7 @@
   ];
   # programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
-      # enable = true;
+      enable = true;
       systemd = {
         enable = true;
       };
