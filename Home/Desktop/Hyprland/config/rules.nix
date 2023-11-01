@@ -27,10 +27,10 @@
           "workspace name:F9,^(io.gitlab.news_flash.NewsFlash)$"
           "workspace name:F10,^(evince)$"
           "workspace name:8,^(VSCodium)$"
-          "workspace special:audio,^(com.github.wwmm.easyeffects)"
+          "workspace special:audio silent,^(com.github.wwmm.easyeffects)"
           "float,^(nm-applet)"
           "workspace name:7,^(gthumb)"
-          "workspace special:mink,^(cr.fr.bionus.Grabber)"
+          "workspace special:mink silent,^(cr.fr.bionus.Grabber)"
         ];
         workspace = [
           "name:1, persistent:true"
