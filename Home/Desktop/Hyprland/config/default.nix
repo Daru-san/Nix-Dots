@@ -84,7 +84,6 @@
           "${pkgs.swww}/bin/swww init"
           "${pkgs.swww}/bin/swww img ${wallpaper}"
           "${pkgs.swaynotificationcenter}/bin/swaync"
-          "${config.wayland.windowManager.hyprland.package}/bin/hyprctl reload"
         ];
         exec-once = [
           "${config.programs.waybar.package}/bin/waybar"
