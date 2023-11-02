@@ -19,13 +19,13 @@ in
       colorScheme = "lunar";
 
       enabledExtensions = with spicePkgs.extensions; [
-        fullAppDisplay
+        fullAppDisplayMod
         # marketplace
         loopyLoop
         powerBar
         seekSong
         autoVolume
-        history
+        historyShortcut
         copyToClipboard
         genre
         volumePercentage
@@ -37,10 +37,14 @@ in
         # h2..
         lastfm
         playlistIcons
+        goToSong
+        listPlaylistsWithSong
       ];
       enabledCustomApps = with spicePkgs.apps; [
         new-releases
         marketplace
+        localFiles
+        lyricsPlus
         # {
         #   name = "localFiles";
         #   src = localFilesSrc;

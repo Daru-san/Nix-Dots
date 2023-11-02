@@ -36,5 +36,7 @@
       browsh
       translate-shell
       tmux
+      krabby
+
     ];
   }
