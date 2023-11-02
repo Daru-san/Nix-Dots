@@ -41,7 +41,7 @@
             #Floating windows 
            "float,^(nm-applet)$"
            "float,^(pavucontrol)$"
-           "flaot,^(.blueman-manager-wrapped)$"
+           "float,^(.blueman-manager-wrapped)$"
            "fullscreen,^(vlc)$"
         ];
         workspace = [
