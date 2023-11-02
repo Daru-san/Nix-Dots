@@ -9,18 +9,13 @@
   home.packages = with pkgs; [
     libreoffice-fresh
     obsidian
-    gimp
-    wpsoffice
+    #gimp
     mission-center
-    # libsForQt5.akregator
     newsflash
-    # libsForQt5.okular
     evince
     gnome3.nautilus
     nautilus-open-any-terminal
     gnome.nautilus-python
-    gnome.sushi
-    rabbitvcs
     freetube
     komikku
     gthumb
@@ -29,6 +24,6 @@
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "obsidian" "wpsoffice"
+    "obsidian"
   ];
 }

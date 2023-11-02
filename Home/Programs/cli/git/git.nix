@@ -12,6 +12,5 @@
   };
   home.packages = with pkgs; [
     gitui
-    lazygit
   ];
 }

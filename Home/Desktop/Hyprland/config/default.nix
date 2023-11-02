@@ -6,17 +6,11 @@
     ./fonts.nix
     ./rules.nix
   ];
-  # programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
       enable = true;
       systemd = {
         enable = true;
       };
-      # package = pkgs.hyprland;
-      extraConfig = ''
-        # source = extra.conf
-        # exec-once = waybar
-      '';
       settings = {
         source = [
           "extra.conf"
@@ -55,7 +49,6 @@
           drop_shadow = true;
           shadow_range = 7;
           shadow_render_power = 6;
-          # col.shadow = "$sky";
         };
         animations = {
           enabled = true;
@@ -90,6 +83,7 @@
         exec-once = [
           "${config.programs.waybar.package}/bin/waybar"
           "${config.programs.kitty.package}/bin/kitty"
+          "${config.programs.kitty.package}/bin/kitty -T Git --hold gitui"
           "${pkgs.cool-retro-term}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
           "${pkgs.easyeffects}/bin/easyeffects"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"

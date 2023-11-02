@@ -1,6 +1,6 @@
 {config, pkgs, ...}:{
   programs.vscode = { 
-    enable = true;
+    enable = false;
     ##Make the vscode package vscodium
     package = pkgs.vscodium;
     keybindings = [

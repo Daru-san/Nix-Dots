@@ -14,16 +14,19 @@ in
   # configure spicetify :)
   programs.spicetify =
     {
+#Enable spicetify
       enable = true;
+#Spicetify theme
       theme = spicePkgs.themes.Dribbblish;
       colorScheme = "lunar";
 
       enabledExtensions = with spicePkgs.extensions; [
+#Extensions for spicetify
         fullAppDisplayMod
-        # marketplace
         loopyLoop
         powerBar
         seekSong
+        bookmark
         autoVolume
         historyShortcut
         copyToClipboard
@@ -34,26 +37,24 @@ in
         adblock
         shuffle # shuffle+ (special characters are sanitized out of ext names)
         hidePodcasts
-        # h2..
         lastfm
         playlistIcons
         goToSong
         listPlaylistsWithSong
+        featureShuffle
+        playlistIntersection
+        skipOrPlayLikedSongs
       ];
       enabledCustomApps = with spicePkgs.apps; [
+#Custom apps
         new-releases
         marketplace
         localFiles
         lyrics-plus
-        
-        # {
-        #   name = "localFiles";
-        #   src = localFilesSrc;
-        #   appendName = false;
-        # }
       ];
     };
-    #Spotifd for spotify-tui
+
+    #Spotifd service for spotify-tui
     services.spotifyd = {
       enable = true;
       settings = {
@@ -63,6 +64,6 @@ in
       };
     };
   home.packages = with pkgs; [
-    spotify-tui
+    spotify-tui #Spotify-tui for terminal usage
   ];
 }

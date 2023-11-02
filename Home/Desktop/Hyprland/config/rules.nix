@@ -1,3 +1,4 @@
+#Window and workspace rules
 {config, ...}:{
     wayland.windowManager.hyprland = {
       settings = {
@@ -7,30 +8,41 @@
           "workspace special:usage,class:(kitty),title:(Performance)"
           "center 1,class:(kitty),title:(Performance)"
           "workspace special:taskmgr,class:(mission-center)"
-
-          "workspace name:F5,class:(kitty),title:(Anime)"
-          "workspace name:F6,class:(kitty),title:(Music)"
-
+          
+          "workspace name:1,class:(kitty),title:(Git)"
           "workspace name:F11,class:(kitty),title:(Files)"
           "workspace name:F12 silent,class:(cool-retro-term),title:(Clock)"
           "fullscreen,class:(cool-retro-term),title:(Clock)"
   
         ];
         windowrule = [
+          #Window specific worspaces
+          "workspace name:7,^(gthumb)$"
+          #Productivity workspaces
           "workspace name:F1,^(firefox)$"
           "workspace name:F2,^(obisidian)$"
           "workspace name:F3,^(libreoffice)$"
           "workspace name:F4,^(org.gnome.Nautilus)$"
+
+          #Entertainment workspaces
+          "workspace name:F5,^(info.febvre.Komikku)$"
+          "workspace name:F6,^(vlc)$"
           "workspace name:F8,^(Spotify)$"
           "workspace name:F7,^(FreeTube)$"
-
+          
+          #Others
           "workspace name:F9,^(io.gitlab.news_flash.NewsFlash)$"
           "workspace name:F10,^(evince)$"
-          "workspace name:8,^(VSCodium)$"
-          "workspace special:audio silent,^(com.github.wwmm.easyeffects)"
-          "float,^(nm-applet)"
-          "workspace name:7,^(gthumb)"
-          "workspace special:mink silent,^(cr.fr.bionus.Grabber)"
+
+          #Special workspaces
+          "workspace special:audio silent,^(com.github.wwmm.easyeffects)$"
+          "workspace special:mink silent,^(cr.fr.bionus.Grabber)$"
+            
+            #Floating windows 
+           "float,^(nm-applet)$"
+           "float,^(pavucontrol)$"
+           "flaot,^(.blueman-manager-wrapped)$"
+           "fullscreen,^(vlc)$"
         ];
         workspace = [
           "name:1, persistent:true"

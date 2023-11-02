@@ -12,5 +12,4 @@
       sha256 = "u6QzTa5VScOZHbO/5WRORjbuQoCA5C774f1z1TTH87k=";
     };
   };
-  home.file."Wallpapers/current".source = config.lib.file.mkOutOfStoreSymlink "~/Wallpapers/images/4k-keyboard.jpg";
 }
