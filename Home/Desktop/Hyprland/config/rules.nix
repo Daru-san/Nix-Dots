@@ -28,6 +28,7 @@
           "workspace name:F5,^(info.febvre.Komikku)$"
           "workspace name:F6,^(vlc)$"
           "workspace name:F8,^(Spotify)$"
+          "fullscreen,^(Spotify)$"
           "workspace name:F7,^(FreeTube)$"
           
           #Others

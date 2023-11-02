@@ -164,7 +164,7 @@ in {
                 car = "";
                 default = ["" "" ""];
               };
-             on-click = "~/.config/rofi/applets/bin/volume.sh";
+             on-click = "pavucontrol";
              tooltip = false;
           };
           "network" = {
