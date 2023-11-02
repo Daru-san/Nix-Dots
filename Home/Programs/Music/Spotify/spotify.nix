@@ -44,7 +44,8 @@ in
         new-releases
         marketplace
         localFiles
-        lyricsPlus
+        lyrics-Plus
+        
         # {
         #   name = "localFiles";
         #   src = localFilesSrc;
