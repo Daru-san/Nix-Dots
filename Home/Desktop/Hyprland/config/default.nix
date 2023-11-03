@@ -82,7 +82,7 @@
         ];
         exec-once = [
           "${config.programs.waybar.package}/bin/waybar"
-          "${config.programs.kitty.package}/bin/kitty"
+          "${config.programs.kitty.package}/bin/kitty -T Terminal"
           "${config.programs.kitty.package}/bin/kitty -T Git --hold zsh -c 'cd ~/Nix-Dots && gitui'"
           "${pkgs.cool-retro-term}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
           "${pkgs.easyeffects}/bin/easyeffects"

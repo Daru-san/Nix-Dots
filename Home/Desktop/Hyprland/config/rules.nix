@@ -8,7 +8,7 @@
           "workspace special:usage,class:(kitty),title:(Performance)"
           "center 1,class:(kitty),title:(Performance)"
           "workspace special:taskmgr,class:(mission-center)"
-          
+          "workspace name:1,class:(kitty),title(Terminal)" 
           "workspace name:2,class:(kitty),title:(Git)"
           "workspace name:F11,class:(kitty),title:(Files)"
           "workspace name:F12 silent,class:(cool-retro-term),title:(Clock)"
