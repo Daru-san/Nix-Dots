@@ -69,8 +69,26 @@
                   { name = "query"; value = "{searchTerms}"; }
                   ];
                }];
-             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "@np" ];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@np" ];
+            };
+            "Nix Options" = {
+              urls = [{
+                template = "https://search.nixos.org/options";
+                params = [
+                  { name = "type"; value = "options"; }
+                  { name = "query"; value = "{searchTerms}"; }
+                  ];
+               }];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@no" ];
+            };
+            "Home Manager" = {
+              urls = [
+                {template = "https://mipmip.github.io/home-manager-option-search/?query={searchTerms}";}                
+              ];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@hm"];
             };
           };
         };
