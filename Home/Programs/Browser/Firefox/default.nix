@@ -1,5 +1,13 @@
 {pkgs, lib, config, ...}:{
-  home.file.".mozilla/firefox/daru/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
+  home.file.".mozilla/firefox/daru" = {
+    recursive = true;
+    source = pkgs.fetchFromGitHub {
+      owner = "Godiesc";
+      repo = "firefox-one";
+      rev = "974fee10ce0ebc9b4025b90bb18d05d74c46230f";
+      sha256 = "t9j9p2nalanN1OdJCjuuFZfIQwKRS6FTD5HaGEcAlmA=";
+    };
+  };
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
@@ -12,14 +20,12 @@
           cliget
           decentraleyes
           disable-javascript
-          edit-with-emacs
           don-t-fuck-with-paste
           disconnect
           enhanced-github
           enhancer-for-youtube
           firefox-color
           violentmonkey
-          firenvim
           github-file-icons
           gitako-github-file-tree
           i-dont-care-about-cookies
@@ -90,6 +96,13 @@
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = [ "@hm"];
             };
+            "StartPage" = {
+              urls = [
+                {template = "https://www.startpage.com/sp/search?query={searchTerms}";}
+              ];
+              icon = " https://www.startpage.com/sp/cdn/favicons/favicon--default.ico";
+              definedAliases = ["@sp"];
+            };
           };
         };
         settings = {
@@ -118,12 +131,12 @@
           "browser.urlbar.suggest.bookmark" = false;
           "browser.urlbar.suggest.history" = false;
           "browser.urlbar.suggest.topsites" = false;
-
+#Firefox-one configs
           "firefoxone.rhythm_sound_tab" = true;
           "firefoxone.selected_tab_gradient_border" = true;
           "firefoxone.style_without_leftsidebar" = true;
           "firefoxone.tree_tabs_style" = true;
-          "firefoxone.without-default-colors" = true;
+          "firefoxone.without-default-colors" = false;
 
           "gfx.webrender.all" = true;
           "layers.acceleration.force-enabled" = true;
