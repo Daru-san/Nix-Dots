@@ -28,12 +28,8 @@
       scrollback_pager = "kitty-scroll";
     };
   };
-  # home.file.".kitty-scroll.sh".text = ''
-  #   #!/bin/sh
-  #   nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent! write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
-  #   
-  # '';
-#Script for scrolling
+
+#Script for scrollback pager
   home.packages = with pkgs; [
         (pkgs.writeShellScriptBin "kitty-scroll" ''
          nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent! write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
