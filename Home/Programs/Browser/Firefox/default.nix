@@ -1,13 +1,5 @@
 {pkgs, lib, config, ...}:{
-  home.file.".mozilla/firefox/daru" = {
-    recursive = true;
-    source = pkgs.fetchFromGitHub {
-      owner = "Godiesc";
-      repo = "firefox-one";
-      rev = "974fee10ce0ebc9b4025b90bb18d05d74c46230f";
-      sha256 = "t9j9p2nalanN1OdJCjuuFZfIQwKRS6FTD5HaGEcAlmA=";
-    };
-  };
+  home.file.".mozilla/firefox/daru/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
