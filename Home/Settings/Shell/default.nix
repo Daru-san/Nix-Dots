@@ -32,8 +32,8 @@
     home-flake = "home-manager switch --flake ~/Nix-Dots --impure";
     Anime = "kitty -T Anime --hold ani-cli --rofi";
     Music = "Kitty -T Music --hold cmus";
-    nix-upgrade = "nixos-rebuild switch --upgrade-all";
-    nix-upgrade-full = "nixos-rebuild --upgrade-all && home-flake";
+    nix-upgrade = "sudo nixos-rebuild switch --upgrade-all";
+    nix-upgrade-full = "sudo nixos-rebuild switch --upgrade-all && home-flake";
     cdots = "cd ~/Nix-Dots/";
     cdownl = "cd ~/Downloads/";
     cdocs = "cd ~/Documents/";
