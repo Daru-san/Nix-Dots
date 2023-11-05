@@ -66,8 +66,6 @@ $crust     = 0xff11111b
   general {
     col.active_border = $sapphire $base
     col.inactive_border = $crustAlpha
-    col.group_border_active = $red $pink 
-    col.group_border = $rosewater
   }
   '';
 }

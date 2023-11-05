@@ -22,21 +22,19 @@
       speedtest-cli #Internet speed test
       lynx #Terminal browser
       w3m #Also a terminal browser and terminal image viewer
-      chroma
-      glow
-      gping
-      nvtop-intel
-      sysz
-      wtf
-      nap
-      jrnl
-      chafa
-      calcure
-      lf 
+      chroma #For cat coloring
+      glow #Markdown editor
+      gping #Ping with graphics
+      nvtop-intel #Gpu top
+      sysz #Systemd service search
+     # wtf
+      nap #Code snippets
+      jrnl #Journal 
+      chafa 
+      calcure  
       browsh
       translate-shell
       tmux
       krabby
-
     ];
   }
