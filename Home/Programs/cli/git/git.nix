@@ -8,6 +8,8 @@
       co = "checkout";
       s = "status";
       a = "add";
+      p = "push";
+      pu = "pull";
     };
   };
   home.packages = with pkgs; [
