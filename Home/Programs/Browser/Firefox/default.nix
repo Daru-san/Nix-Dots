@@ -129,6 +129,7 @@
           "firefoxone.style_without_leftsidebar" = true;
           "firefoxone.tree_tabs_style" = true;
           "firefoxone.without-default-colors" = false;
+          "firefoxone.main-image" = false;
 
           "gfx.webrender.all" = true;
           "layers.acceleration.force-enabled" = true;
