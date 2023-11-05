@@ -41,7 +41,6 @@
         # ...
     ];
 
-    # not these though
     stateVersion = "unstable";
   in {
     packages = genSystems (system: {
@@ -50,6 +49,8 @@
         modules = [
             ./Home/default.nix
             {nixpkgs.overlays = [ nur.overlay ];}
+            hyprland.homeManagerModules.default
+            {wayland.windowManager.hyprland.enable = true;}
             ];
         extraSpecialArgs =
           inputs
