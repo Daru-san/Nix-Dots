@@ -49,8 +49,8 @@
         modules = [
             ./Home/default.nix
             {nixpkgs.overlays = [ nur.overlay ];}
-            hyprland.homeManagerModules.default
-            {wayland.windowManager.hyprland.enable = true;}
+            # hyprland.homeManagerModules.default
+            # {wayland.windowManager.hyprland.enable = true;}
             ];
         extraSpecialArgs =
           inputs
