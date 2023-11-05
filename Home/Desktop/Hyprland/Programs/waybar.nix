@@ -6,13 +6,6 @@ in {
     imports = [
       ./waybar-style.nix
     ];
-    # nixpkgs.overlays = [
-    #  (self: super: {
-    #   waybar = super.waybar.overrideAttrs (oldAttrs: {
-    #       mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-    #     });
-    # })
-  # ];
   programs.waybar = {
     package = pkgs.waybar.overrideAttrs (oa: {
       mesonFlags = (oa.mesonFlags or  []) ++ [ "-Dexperimental=true" ];
@@ -157,8 +150,7 @@ in {
              format-muted = "󰝟 {format_source}";
              format-icons = {
                 headphone = "󰋋";
-#                hands-free = "";
- #               headset = "";
+
                 phone = "";
                 portable = "";
                 car = "";
