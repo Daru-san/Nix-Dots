@@ -19,6 +19,7 @@ My NixOS configuration featuring flakes, Sway and Hyprland
         <li>Launcher: rofi</li>
         <li>Bar: waybar</li>
         <li>Terminal: kitty</li>
+        <li>Shell: zsh</li>
         <li>Music: Spicetify</li>
         <li>Editor: Neovim(NvChad)</li>
         <li>System monitor: Btop</li>
@@ -40,6 +41,7 @@ My NixOS configuration featuring flakes, Sway and Hyprland
         <li>Finish Neovim config with NvChad</li>
         <li>Add rofi wifi menu</li>
         <li>Finish firefoxone config</li>
+        <li>Update the theme</li>
     </ul>
     
 </b>
