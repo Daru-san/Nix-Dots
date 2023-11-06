@@ -16,6 +16,7 @@ in{
       systemd = {
         enable = true;
       };
+      enableNvdiaPatches = false;
       settings = {
         source = [
           "extra.conf"
