@@ -6,8 +6,15 @@
     ./fonts.nix
     ./rules.nix
   ];
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = let
+    pkgs = import (builtins.fetchTarball {
+        url = "https://github.com/NixOS/nixpkgs/archive/9957cd48326fe8dbd52fdc50dd2502307f188b0d.tar.gz";
+    }) {};
+
+    hyprland = pkgs.hyprland;
+in{
       enable = true;
+      package = hyprland;
       systemd = {
         enable = true;
       };
