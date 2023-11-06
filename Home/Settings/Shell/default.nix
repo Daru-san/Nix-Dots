@@ -42,5 +42,7 @@
     anidu = "ani-cli  --rofi --vlc --dub";
     anid = "ani-cli -d";
     anidud = "ani-cli --dub -d";
+    firefox = "/run/current-system/sw/bin/firefox";
+    Hyprland = "/run/current-system/sw/bin/Hyprland";
   };
 }
