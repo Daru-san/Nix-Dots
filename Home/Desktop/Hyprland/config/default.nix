@@ -134,8 +134,5 @@
       ]);
     };
   };
-  home.packages = with pkgs; [
-    hyprland
-  ];
 }
 
