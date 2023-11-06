@@ -5,8 +5,8 @@
 
         windowrulev2 = [
           #Task manager-like window for system monitoring 
-          "workspace special:usage,class:(kitty),title:(Performance)"
-          "center 1,class:(kitty),title:(Performance)"
+          "workspace special:usage,class:(kitty),title:(SystemMonitor)"
+          "center 1,class:(kitty),title:(SystemMonitor)"
           "workspace special:taskmgr,class:(mission-center)"
           "workspace name:1,class:(kitty),title(Terminal)" 
           "workspace name:2,class:(kitty),title:(Git)"

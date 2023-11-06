@@ -35,4 +35,13 @@
          nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent! write! /tmp/kitty_scrollback_buffer | te cat /tmp/kitty_scrollback_buffer - "
      '')
   ];
+  home.file.".config/kitty/SystemMonitor.conf".text = ''
+    new_tab SystemMonitor
+    title Btop
+    launch btop
+
+    new_tab Graphics
+    title NvTop
+    launch nvtop
+  '';
 }

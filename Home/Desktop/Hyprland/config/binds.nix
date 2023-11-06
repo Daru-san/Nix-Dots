@@ -48,7 +48,7 @@ in {
       "SUPERALT,caps_lock,togglespecialworkspace,mink"
       "SUPER,a,togglespecialworkspace,audio"
 
-      "SUPERSHIFT,P,exec,kitty -T Performance --hold btop"
+      "SUPERSHIFT,P,exec,kitty -T SystemMonitor --session SystemMonitor.conf"
 
       #Super+tab to move to next workspace and back
       "SUPER,TAB,workspace,m+1"
