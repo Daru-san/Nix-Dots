@@ -12,9 +12,6 @@
         enable = true;
       };
       settings = {
-        misc = {
-          suppress_portal_warnings = true;
-        };
         source = [
           "extra.conf"
           "colors"
