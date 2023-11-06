@@ -5,7 +5,7 @@
     nur.url = github:nix-community/NUR;
     spicetify-nix.url = github:the-argus/spicetify-nix;
     home-manager = {
-      url = github:nix-community/home-manager;
+      url = github:nix-community/home-manager/master;
       # home manager use our nixpkgs and not its own
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -27,7 +27,6 @@
     username = "daru";
 
 
-    homeConfigUserString = username;
     supportedSystems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -38,19 +37,19 @@
         hyprland.homeManagerModules.default
         {wayland.windowManager.hyprland.enable = true;}
         {nixpkgs.overlays = [ nur.overlay ];}
-        # ...
     ];
+    config = {
+      allowUnfree = true;
+    };
 
     stateVersion = "unstable";
   in {
     packages = genSystems (system: {
-      homeConfigurations.${homeConfigUserString} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs.${system};
         modules = [
             ./Home/default.nix
             {nixpkgs.overlays = [ nur.overlay ];}
-            # hyprland.homeManagerModules.default
-            # {wayland.windowManager.hyprland.enable = true;}
             ];
         extraSpecialArgs =
           inputs
