@@ -12,6 +12,9 @@
         enable = true;
       };
       settings = {
+        misc = {
+          suppress_portal_warnings = true;
+        };
         source = [
           "extra.conf"
           "colors"
@@ -87,6 +90,7 @@
           "${pkgs.cool-retro-term}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
           "${pkgs.easyeffects}/bin/easyeffects"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"
+          "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent"
         ];
         bind = let
         swayosd = "${config.services.swayosd.package}/bin/swayosd";
