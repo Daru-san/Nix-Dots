@@ -8,13 +8,11 @@
   ];
   wayland.windowManager.hyprland = let
     pkgs = import (builtins.fetchTarball {
-        url = "https://github.com/NixOS/nixpkgs/archive/9957cd48326fe8dbd52fdc50dd2502307f188b0d.tar.gz";
+        url = "https://github.com/NixOS/nixpkgs/archive/50a7139fbd1acd4a3d4cfa695e694c529dd26f3a.tar.gz";
     }) {};
-
-    hyprland = pkgs.hyprland;
 in{
       enable = true;
-      package = hyprland;
+      package = pkgs.hyprland;
       systemd = {
         enable = true;
       };
