@@ -29,10 +29,9 @@
   programs.hyprland = {
     enable = true;
     package = pkgs.hyprland;
-    xwayland = {
-      enable = true;
-    };
   };
+  
+
   services.greetd = {
     enable = true;
     settings = rec {
@@ -151,8 +150,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [    
     neofetch
     ranger
@@ -180,6 +177,8 @@
     clang
     zig
     iw
+    clinfo
+    glxinfo
   ];
 
   #Neovim config
@@ -228,6 +227,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "unstable"; # Did you read the comment?
+  system.copySystemConfiguration = true;
 
   #KDE polkit for hyprland
   systemd = {
