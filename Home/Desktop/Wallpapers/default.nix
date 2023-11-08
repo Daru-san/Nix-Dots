@@ -1,8 +1,8 @@
 #Wallpaper config
 {config, pkgs, lib, ...}:{
   home.packages = let
-    flag = 'flag'; #These are just to help with variable conflicts in nix and bash
-    OPTARG = 'OPTARG';
+    flag = "flag"; #These are just to help with variable conflicts in nix and bash
+    OPTARG = "OPTARG";
   in  with pkgs; [
     swww #Wallpaper support for wayland
 
