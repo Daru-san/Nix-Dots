@@ -50,4 +50,15 @@
     title NvTop
     launch nvtop
   '';
+  home.file.".config/kitty/git.conf".text = ''
+    new_tab GitUI
+    title GitUI
+    cd ~/Nix-Dots 
+    launch Gitui 
+
+    new_tab GitFiles
+    title Ranger
+    cd ~/Nix-Dots 
+    launch ranger
+  '';
 }
