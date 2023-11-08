@@ -8,16 +8,23 @@
 
     #Script for wallpaper(you can use it choose between sway and swww depending on your setup)
     (pkgs.writeShellScriptBin "wall-script" ''
-      while getopts w:i:k: flag #w for wallpaper program(swaybg or swww); i for image
+      kill() {
+        pkill swww-daemon
+        pkill swaybg
+        sleep 3
+        notify-send 'Killed all wallpaper daemons'
+      }
+      print_usage() {
+        printf "usage: wall-script -w (wallpaper program:swww or swaybg) -i (image)"
+      }
+      while getopts w:i:k:h: flag #w for wallpaper program(swaybg or swww); i for image
     do
       case "${flag}" in
          w) program=${OPTARG};;
          i) image=${OPTARG};;
-         k) pkill swww-daemon
-            pkill swaybg
-            notify-send 'Killed all wallpaper daemons'
-            exit 1;; #Kills all wallpaper daemons and exits
-         h) echo 'usage: wall-script -w (wallpaper program:swww or swaybg) -i (image)' #Prints a small guide
+         k) kill
+            exit 1;;
+         h) print_usage
             exit 1;;
       esac
     done
