@@ -1,8 +1,10 @@
+#Git config
 {config,pkgs,...}:{
   programs.git = {
     enable = true;
     userName = "0LaMica";
-    userEmail = "mica.tui@proton.me";   
+    userEmail = "mica.tui@proton.me";
+    #Git aliases
     aliases = {
       ci = "commit";
       co = "checkout";
@@ -13,6 +15,6 @@
     };
   };
   home.packages = with pkgs; [
-    gitui
+    gitui #Gitui for tui git management
   ];
 }

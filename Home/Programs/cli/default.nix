@@ -1,5 +1,7 @@
+#Configuration and declaring of most of the cli programs
 {config, pkgs, ...}:{
     imports = [
+      #Programs that have specialized modules
       ./ranger/ranger.nix
       ./neovim/nvim.nix
       ./btop/btop.nix 

@@ -1,3 +1,4 @@
+#Home programs
 {config, pkgs, lib, ...}:{
   imports = [
     ./cli/default.nix

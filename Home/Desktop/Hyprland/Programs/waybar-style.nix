@@ -1,5 +1,5 @@
 {config, pkgs, lib, ...}:{
-
+#Waybar styling
   programs.waybar.style = ''
   @import "waybar-theme.css";
 * {

@@ -6,6 +6,7 @@ in {
       ./waybar-style.nix
     ];
   programs.waybar = {
+      #Fix for waybar hyprland scrolling
     package = pkgs.waybar.overrideAttrs (oa: {
       mesonFlags = (oa.mesonFlags or  []) ++ [ "-Dexperimental=true" ];
       patches = (oa.patches or []) ++ [
@@ -18,12 +19,15 @@ in {
      });
     
     enable = true;
+
     settings = [
       {
         layer = "top";
         position = "bottom";
         height = 30;
         output = "HDMI-A-1";
+
+        #Enabled modules
         modules-left = [
           "clock"
           ];
@@ -41,6 +45,7 @@ in {
           "custom/notification"
         ];
 
+          #Module configs
           "hyprland/workspaces" = {
               format = "{icon}";
               format-icons = {

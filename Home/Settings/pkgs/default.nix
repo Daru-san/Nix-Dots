@@ -14,6 +14,7 @@ in
   };
 }
   '';
+#Allow unfree packages(home generation doesn't work without it)
   home.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = 1;
   };

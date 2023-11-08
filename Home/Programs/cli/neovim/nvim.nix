@@ -8,4 +8,6 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+#TODO:
+#-- Add NvChad to config
 }

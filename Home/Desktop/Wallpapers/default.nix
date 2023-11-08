@@ -1,9 +1,10 @@
+#Wallpaper config
 {config, pkgs, lib, ...}:{
   home.packages = with pkgs; [
     swww
   ];
+#Clone wallpapers repo 'github.com/D3Ext/aesthetic-wallpapers'
   home.file."Wallpapers" = {
-
     recursive = true;
     source = pkgs.fetchFromGitHub {
       owner = "D3Ext";

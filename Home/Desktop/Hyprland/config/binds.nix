@@ -1,11 +1,10 @@
-##Borrowed config##
-
 { lib, ... }:
 let
   workspaces =
     (map toString (lib.range 0 9)) ++
     (map (n: "F${toString n}") (lib.range 1 12));
   # Map keys to hyprland directions
+#Not originally mine, I'll add credits when I find the repo
   directions = rec {
     left = "l"; right = "r"; up = "u"; down = "d";
     h = left; l = right; k = up; j = down;
@@ -13,6 +12,7 @@ let
 in {
   wayland.windowManager.hyprland.settings = {
     bindm = [
+      #Mouse bindings
       "SUPER,mouse:272,movewindow"
       "SUPER,mouse:273,resizewindow"
     ];

@@ -5,7 +5,10 @@
     package = pkgs.firefox;
     profiles = {
       daru = {
+        #Name
         name = "daruFox";
+
+        #Extensions(from NUR)
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           behave
           boring-rss
@@ -40,7 +43,11 @@
           widegithub
           tabcenter-reborn
           ];
+
+        #Make this profile the default
         isDefault = true;
+
+        #Search engines
         search = {
           default = "Brave Search";
           force = true;
@@ -97,6 +104,8 @@
             };
           };
         };
+
+        #Settings(in user.js)
         settings = {
           "browser.disableResetPrompt" = true;
           "browser.shell.checkDefaultBrowser" = false;
@@ -123,13 +132,6 @@
           "browser.urlbar.suggest.bookmark" = false;
           "browser.urlbar.suggest.history" = false;
           "browser.urlbar.suggest.topsites" = false;
-#Firefox-one configs
-          "firefoxone.rhythm_sound_tab" = true;
-          "firefoxone.selected_tab_gradient_border" = true;
-          "firefoxone.style_without_leftsidebar" = true;
-          "firefoxone.tree_tabs_style" = true;
-          "firefoxone.without-default-colors" = false;
-          "firefoxone.main-image" = false;
 
           "gfx.webrender.all" = true;
           "layers.acceleration.force-enabled" = true;
@@ -152,6 +154,13 @@
           "privacy.userContext.ui.enabled" = true;
           "privacy.userContext.longPressBehavior" = 2;
 
+          #Firefox-one configs
+          "firefoxone.rhythm_sound_tab" = true;
+          "firefoxone.selected_tab_gradient_border" = true;
+          "firefoxone.style_without_leftsidebar" = true;
+          "firefoxone.tree_tabs_style" = true;
+          "firefoxone.without-default-colors" = true;
+          "firefoxone.main-image" = true;
         };
       };
     };

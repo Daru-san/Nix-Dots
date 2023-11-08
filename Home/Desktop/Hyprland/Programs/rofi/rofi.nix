@@ -1,11 +1,14 @@
 {config, pkgs,lib, ...}:
 let
+#Declare for style
   style = "./Themes/Styles/type-1/style-6.rasi";
 in {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi-wayland; #Set package to rofi-wayland for Hyprland
+
     plugins = with pkgs; [
+      #Rofi plugins
       rofi-calc
       rofi-top
       rofi-emoji
@@ -18,6 +21,7 @@ in {
     };
   };
   home.packages = with pkgs; [
+  #Plugins that aren't directly included
     rofi-bluetooth
     rofi-power-menu
   ];

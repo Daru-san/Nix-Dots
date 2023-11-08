@@ -1,3 +1,4 @@
+#Ani cli config, terminal anime client
 {config, pkgs, ...}:
 { 
   home.packages = with pkgs; [
