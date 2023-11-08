@@ -17,7 +17,7 @@
 */
 
 window#waybar {
-    background-color: @dark1;
+    background-color: #202220;
     transition-property: background-color;
     transition-duration: .5s;
 
@@ -48,7 +48,7 @@ button:hover {
 
 #workspaces button {
     background-color: transparent;
-    color: @teal;
+    color: #8abf97;
     padding-left: 4px;
     padding-right: 7px;
 
@@ -87,7 +87,7 @@ button:hover {
     margin-bottom: 4px;
     margin-left: 3px;
     margin-right: 3px;
-    background-color: @dark3;
+    background-color: #313231;
 
 }
 
@@ -125,20 +125,20 @@ button:hover {
 #mpd {
     padding: 0 11px;
     margin-top: 4px;
-    color: @teal;
+    color: #f23131;
     margin-bottom: 4px;
-    background-color: @dark3;
+    background-color: #98ada1;
     /*border-radius: 2rem 2rem 2rem 2rem;*/
 }
 
 #custom-notification {
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 1rem 0rem 1rem 1rem;
 }
 
 #pulseaudio,
 #clock{
-    color: @sapphire;
-    border-radius: 2rem 2rem 2rem 2rem;
+    color: #1a1f1a;
+    border-radius: 1rem 0rem 1rem 0rem;
     margin-right:3px;
     margin-left:3px;
 /*    background-color: @light2;*/
@@ -153,7 +153,7 @@ button:hover {
 #memory {
    /* color: @text2;*/
     margin-right:3px;
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 0rem 0rem 1rem 0rem;
 }
 
 #disk {
@@ -166,7 +166,7 @@ button:hover {
 #network,
 #battery {
  /*   color: @text2;*/
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 1rem 0 0 1rem;
     margin-left:3px;
     margin-right:0px;
 }
@@ -174,14 +174,14 @@ button:hover {
 #tray,
 #custom-notification,
 #bluetooth {
-  background-color: @deep-blue;
-  color: @sky;
+  background-color: #424242;
+  color: #79bf9f;
 }
 #memory,
 #cpu,
 #battery {
 /* background-color: @dark-blue;*/
- color: @sapphire;
+ color: #102f2a;
 }
 
 @keyframes blink {
@@ -191,7 +191,9 @@ button:hover {
     }
 }
 
-
+#tray{
+	border-radius: 1rem 1rem 1rem 1rem;
+}
 label:focus {
     background-color: #000000;
 }
@@ -201,78 +203,5 @@ label:focus {
     
     color: @red;
 }
-
-#wireplumber {
- 
-    color: #000000;
-}
-
-#wireplumber.muted {
-    
-}
-
-
-#temperature {
- color: white;
-}
-
-#temperature.critical ~ #cpu {
-    color: red;
-}
-
-#tray {
-  border-radius: 2rem 2rem 2rem 2rem;
-  margin-right:3px;
-  margin-left:3px;  
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-   
-}
-
-
-#language {
-    background-color: @dark1;
-    color: @text2;
-    padding: 1 3px;
-    margin: 1 3px;
-    min-width: 17px;
-
-}
-
-
-
-#keyboard-state {
-    background: @dark2; 
-    color: @dark2;
-    padding: 1 3px;
-    margin: 1 3px;
-    min-width: 17px;
-
-} 
-
-#keyboard-state > label.locked {
-    background: @dark2; 
-    color: @text3;
-    padding: 1 3px;
-    margin: 1 3px;
-    min-width: 17px;
-
-}       
-
-#scratchpad {
-    background: @dark1;
-    color: @text2;
-}
-
-#scratchpad.empty {
-	background-color: transparent;
-}
-
     '';
 }

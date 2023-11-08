@@ -74,7 +74,7 @@
         };
         exec = 
         let
-          wallpaper = "~/Wallpapers/images/routine.jpg";
+          wallpaper = "~/Wallpapers/images/plant.png";
         in [
           "${pkgs.swww}/bin/swww init"
           "${pkgs.swww}/bin/swww img ${wallpaper}"
