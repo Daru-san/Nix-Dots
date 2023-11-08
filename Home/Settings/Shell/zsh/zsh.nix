@@ -12,7 +12,7 @@
         size = 10000;
         path = "${config.xdg.dataHome}/zsh/history";
       };
-#Oh-my-zsh for themes and plugins
+      #Oh-my-zsh for themes and plugins
       oh-my-zsh = {
         enable = true;
         #Plugins
@@ -62,5 +62,9 @@
     loginExtra = ''
       krabby name decidueye
     '';
+    profileExtra = ''
+      krabby name decidueye
+    '';
+    home.file.".marks".source = config.lib.file.mkOutOfStoreSymlink ./marks; #Add marks to home directory (used for autojump)
   };
 }

@@ -1,6 +1,7 @@
 ##Global shell configuration##
 {config, pkgs, ...}:{
-  imports = [ 
+  imports = [
+  #Import bash and zsh configs
   ./zsh/zsh.nix
   ./bash/bash.nix 
   ];
@@ -44,5 +45,6 @@
     anidud = "ani-cli --dub -d";
     firefox = "/run/current-system/sw/bin/firefox";
     Hyprland = "/run/current-system/sw/bin/Hyprland";
+    rebootf = "sudo systemctl reboot -f";
   };
 }
