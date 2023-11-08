@@ -38,5 +38,6 @@
       translate-shell
       tmux
       krabby
+      yafetch
     ];
   }
