@@ -7,6 +7,7 @@
       ./yt-dlp/yt-dlp.nix
       ./git/git.nix
       ./ani-cli/ani-cli.nix
+      # ./emacs/default.nix
     ];
     home.packages = with pkgs; [
       hello #Hi there
