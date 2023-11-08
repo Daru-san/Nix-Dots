@@ -1,5 +1,5 @@
 # Nix-Dots
-My NixOS configuration featuring flakes, Sway and Hyprland
+My NixOS configuration featuring flakes and Hyprland
 
 <p align="center"><img src="https://i.imgur.com/X5zKxvp.png" width=300px></p>
 <p align="center">
@@ -8,7 +8,7 @@ My NixOS configuration featuring flakes, Sway and Hyprland
   
 </p>
 <b>
-    My personal NixOS, home manager config using home manager flake and Hyprland
+    My personal NixOS, home manager config using flakes and Hyprland
     <br>
     <h3>
         Main programs
@@ -42,6 +42,9 @@ My NixOS configuration featuring flakes, Sway and Hyprland
         <li>Add rofi wifi menu</li>
         <li>Finish firefoxone config</li>
         <li>Update the theme</li>
+        <li>Implement theme switching</li>
+        <li>Redo rofi config</li>
+        <li>Set up eww widgets</li>
+        <li>Finish documentation</li>
     </ul>
-    
 </b>
