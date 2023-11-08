@@ -46,5 +46,7 @@ My NixOS configuration featuring flakes and Hyprland
         <li>Redo rofi config</li>
         <li>Set up eww widgets</li>
         <li>Finish documentation</li>
+        <li>Add custom shells for specific languages</li>
+        <li>Migrate to cli/tui programs</li>
     </ul>
 </b>
