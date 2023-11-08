@@ -1,9 +1,6 @@
 #Wallpaper config
 {config, pkgs, lib, ...}:{
-  home.packages = let
-    flag = "${flag}"; #These are just to help with variable conflicts in nix and bash
-    OPTARG = "${OPTARG}";
-  in  with pkgs; [
+  home.packages = with pkgs; [
     swww #Wallpaper support for wayland
 
     #Script for wallpaper(you can use it choose between sway and swww depending on your setup)
@@ -19,31 +16,31 @@
       }
       while getopts w:i:k:h: flag #w for wallpaper program(swaybg or swww); i for image
     do
-      case "${flag}" in
-         w) program=${OPTARG};;
-         i) image=${OPTARG};;
+      case "$flag" in
+         w) program=$OPTARG;;
+         i) image=$OPTARG;;
          k) kill
             exit 1;;
          h) print_usage
             exit 1;;
       esac
     done
-         if [[ $program = 'swww' ]]
+         if [[ $program = "swww" ]]
           then
-            echo 'using swww for wallpaper'
+            echo "using swww for wallpaper"
             pkill swww-daemon
             swww init
             sleep 2
             swww img $image
-            notify-send 'Wallpaper has been set successfully'
-         elif [[ $program = 'swaybg' ]]
+            notify-send "Wallpaper has been set successfully"
+         elif [[ $program = "swaybg" ]]
           then
-            echo 'using swaybg for wallpaper'
+            echo "using swaybg for wallpaper"
             pkill swaybg
             swaybg -i $image
-            notify-send 'Wallpaper has been set successfully'
+            notify-send "Wallpaper has been set successfully"
         else
-          notify-send 'Wallpaper daemon not specified, please specify one in the config'
+          notify-send "Wallpaper daemon not specified, please specify one in the config"
         fi   
      '')
   ];
