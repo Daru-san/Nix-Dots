@@ -1,6 +1,9 @@
 #Wallpaper config
 {config, pkgs, lib, ...}:{
-  home.packages = with pkgs; [
+  home.packages = let
+    flag = 'flag'; #These are just to help with variable conflicts in nix and bash
+    OPTARG = 'OPTARG';
+  in  with pkgs; [
     swww #Wallpaper support for wayland
 
     #Script for wallpaper(you can use it choose between sway and swww depending on your setup)
