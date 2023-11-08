@@ -1,24 +1,30 @@
 {config, pkgs, ...}: {
+  imports = [
+    ./kitty-tab-bar.nix #Import custom tab bar for kitty
+  ];
   programs.kitty = {
     enable = true;
-    theme = "Night Owl";
+    theme = "Everforest-Dark-Hard";
     font = {
-      name = "Jetbrains Mono Nerd Font";
+      name = "Roboto Mono Nerd Font";
       size = 12;
     };
     settings = {
-      tab_bar_edge = "bottom";
-      tab_bar_style = "powerline";
+      tab_bar_edge = "top";
+      tab_bar_style = "custom";
+      #tab_powerline_style = "round";
+      tab_activity_symbol = "◉";
+      active_tab_font_style = "bold";
       inactive_tab_font_style = "italics";
       input_delay = 1;
       repaint_delay = 7;
-      window_margin_width = 12;
-      window_margin_height = 10;
+      window_margin_width = 8;
+      window_margin_height = 6;
       term = "kitty";
       placement_strategy ="center";
 
       hide_window_decorations = false;
-      background_opacity = 0;
+      background_opacity = 0.32;
       sync_to_monitor = true;
       mouse_hide_wait = 20;
       cursor_shape = "beam";
