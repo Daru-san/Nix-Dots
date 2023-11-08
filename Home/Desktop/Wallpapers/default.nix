@@ -3,13 +3,38 @@
   home.packages = with pkgs; [
     swww #Wallpaper support for wayland
 
-    #Script for wallpaper
+    #Script for wallpaper(you can use it choose between sway and swww depending on your setup)
     (pkgs.writeShellScriptBin "wall-script" ''
-         pkill swww-daemon
-         sleep 3 
-         swww init
-         sleep 2
-         swww img $1 
+      while getopts w:i:k: flag #w for wallpaper program(swaybg or swww); i for image
+    do
+      case "${flag}" in
+         w) program=${OPTARG};;
+         i) image=${OPTARG};;
+         k) pkill swww-daemon
+            pkill swaybg
+            notify-send 'Killed all wallpaper daemons'
+            exit 1;; #Kills all wallpaper daemons and exits
+         h) echo 'usage: wall-script -w (wallpaper program:swww or swaybg) -i (image)' #Prints a small guide
+            exit 1;;
+      esac
+    done
+         if [[ $program = 'swww' ]]
+          then
+            echo 'using swww for wallpaper'
+            pkill swww-daemon
+            swww init
+            sleep 2
+            swww img $image
+            notify-send 'Wallpaper has been set successfully'
+         elif [[ $program = 'swaybg' ]]
+          then
+            echo 'using swaybg for wallpaper'
+            pkill swaybg
+            swaybg -i $image
+            notify-send 'Wallpaper has been set successfully'
+        else
+          notify-send 'Wallpaper daemon not specified, please specify one in the config'
+        fi   
      '')
   ];
 #Clone wallpapers repo 'github.com/D3Ext/aesthetic-wallpapers'

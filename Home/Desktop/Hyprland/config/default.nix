@@ -73,9 +73,11 @@
         };
         exec = 
         let
-          wallpaper = "~/Wallpapers/images/plant.png";
+          #These are for the script, you can change them
+          wallpaper = "~/Wallpapers/images/plant.png"; #change this to the wallpaper directory
+          program = "swww"; #You can choose between swww and swaybg for wallpapers (You need to add swaybg to the config if so)
         in [
-          "zsh -c 'wall-script ${wallpaper}'" #Wallpaper script
+          "zsh -c 'wall-script -w ${program} -i ${wallpaper}'" #Wallpaper script
           "${pkgs.swaynotificationcenter}/bin/swaync"
         ];
         exec-once = [

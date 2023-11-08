@@ -16,5 +16,19 @@
   };
   home.packages = with pkgs; [
     gitui #Gitui for tui git management
+
+      #Git scripts to make editing from any directory easier
+      (pkgs.writeShellScriptBin "git-push" ''
+         cd ~/Nix-Dots 
+           git push 
+      '')
+      (pkgs.writeShellScriptBin "git-ui" ''
+         cd ~/Nix-Dots
+         gitui
+     '')
+      (pkgs.writeShellScriptBin "git-r" ''
+         cd ~/Nix-Dots/ 
+         ranger
+     '')
   ];
 }
