@@ -13,6 +13,7 @@
       url = github:hyprwm/Hyprland;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
   outputs = {
@@ -22,14 +23,12 @@
     spicetify-nix,
     hyprland,
     nur,
+    nix-doom-emacs,
     ...
   } @ inputs: let
     username = "daru";
-
-
     supportedSystems = [
       "x86_64-linux"
-      "aarch64-linux"
     ];
     genSystems = nixpkgs.lib.genAttrs supportedSystems;
     pkgs = genSystems (system: import nixpkgs {inherit system;});
@@ -48,13 +47,21 @@
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs.${system};
         modules = [
-            ./Home/default.nix
-            {nixpkgs.overlays = [ nur.overlay ];}
-            ];
+          ./Home/default.nix
+          {nixpkgs.overlays = [ nur.overlay ];}
+          {imports = [
+            nix-doom-emacs.hmModule
+          ];
+           programs.doom-emacs = {
+            enable = true;
+            doomPrivateDir = ./Home/Programs/cli/emacs/doom.d;
+            };
+          }
+        ];
         extraSpecialArgs =
           inputs
           // {
-            inherit username hyprland;
+            inherit username hyprland nix-doom-emacs;
           };
       };
     });
