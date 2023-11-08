@@ -4,7 +4,7 @@
   ];
   programs.kitty = {
     enable = true;
-    theme = "Vibrant Ink";
+    theme = "Adwaita darker";
     font = {
       name = "Jetbrains Mono Nerd Font";
       size = 12;
