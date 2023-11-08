@@ -7,13 +7,14 @@
     ./playerctl.nix
   ];
   home.packages = with pkgs; [
-    wl-clipboard
+    wl-clipboard #Clipboard
     swaynotificationcenter
-    hyprpicker
-    cool-retro-term
-    wtype
+    hyprpicker #I need to get this to work with extensions
+    cool-retro-term #Nice terminal
+    wtype #Clipboard
   ];
   home.sessionVariables = {
     TERMINAL = "${config.programs.kitty.package}/bin/kitty";
+#Make kitty default terminal
   };
 }
