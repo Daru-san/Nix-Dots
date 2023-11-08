@@ -1,7 +1,6 @@
 {config, pkgs, ...}:
 let
   rofi-bluetooth = "${pkgs.rofi-bluetooth}/bin/rofi-bluetooth";
-  # rofi-wifi-menu = "./r"
 in {
     imports = [
       ./waybar-style.nix
@@ -22,12 +21,26 @@ in {
     settings = [
       {
         layer = "top";
-        position = "top";
-        height = 34;
+        position = "bottom";
+        height = 30;
         output = "HDMI-A-1";
-        modules-left = ["sway/workspaces" "hyprland/workspaces" "sway/language" "sway/mode" "sway/scratchpad" "keyboard-state"];
-        modules-center = ["clock"];
-        modules-right = ["pulseaudio" "network" "bluetooth" "battery" "cpu" "memory" "tray" "custom/notification"];
+        modules-left = [
+          "clock"
+          ];
+        modules-center = [
+          "hyprland/workspaces"
+        ];
+        modules-right = [
+          "pulseaudio" 
+          "network" 
+          "bluetooth" 
+          "battery" 
+          "cpu" 
+          "memory" 
+          "tray" 
+          "custom/notification"
+        ];
+
           "hyprland/workspaces" = {
               format = "{icon}";
               format-icons = {
