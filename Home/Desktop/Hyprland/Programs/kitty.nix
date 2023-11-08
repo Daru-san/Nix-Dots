@@ -4,7 +4,7 @@
   ];
   programs.kitty = {
     enable = true;
-    theme = "Everforest-Dark-Hard";
+    theme = "Xcodedark";
     font = {
       name = "Roboto Mono Nerd Font";
       size = 12;
@@ -24,7 +24,7 @@
       placement_strategy ="center";
 
       hide_window_decorations = false;
-      background_opacity = 0.32;
+      background_opacity = 0;
       sync_to_monitor = true;
       mouse_hide_wait = 20;
       cursor_shape = "beam";
