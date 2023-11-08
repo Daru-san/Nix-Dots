@@ -53,8 +53,8 @@
   home.file.".config/kitty/git.conf".text = ''
     new_tab GitUI
     title GitUI
-    cd ~/Nix-Dots 
-    launch gitui 
+    cd ~/Nix-Dots
+    launch gitui
 
     new_tab GitFiles
     title Ranger
