@@ -65,6 +65,6 @@
     profileExtra = ''
       krabby name decidueye
     '';
-    home.file.".marks".source = config.lib.file.mkOutOfStoreSymlink ./marks; #Add marks to home directory (used for autojump)
   };
+  home.file.".marks".source = config.lib.file.mkOutOfStoreSymlink ./marks; #Add marks to home directory (used for autojump)
 }
