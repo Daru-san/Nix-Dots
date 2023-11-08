@@ -1,7 +1,16 @@
 #Wallpaper config
 {config, pkgs, lib, ...}:{
   home.packages = with pkgs; [
-    swww
+    swww #Wallpaper support for wayland
+
+    #Script for wallpaper
+    (pkgs.writeShellScriptBin "wall-script" ''
+         pkill swww-daemon
+         sleep 3 
+         swww init
+         sleep 2
+         swww img $1 
+     '')
   ];
 #Clone wallpapers repo 'github.com/D3Ext/aesthetic-wallpapers'
   home.file."Wallpapers" = {
