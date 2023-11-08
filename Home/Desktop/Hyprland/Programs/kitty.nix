@@ -13,7 +13,7 @@
       tab_bar_edge = "top";
       tab_bar_style = "custom";
       #tab_powerline_style = "round";
-      # tab_activity_symbol = "◉";
+      tab_activity_symbol = "!";
       active_tab_font_style = "bold";
       inactive_tab_font_style = "italics";
       input_delay = 1;
@@ -24,7 +24,7 @@
       placement_strategy ="center";
 
       hide_window_decorations = false;
-      background_opacity = 0;
+      background_opacity = "0.14";
       sync_to_monitor = true;
       mouse_hide_wait = 20;
       cursor_shape = "beam";
