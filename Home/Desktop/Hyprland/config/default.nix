@@ -18,11 +18,10 @@
           "colors.conf"
         ];
         general =  {
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 2;
+          gaps_out = 7;
           border_size = 2.7;
           cursor_inactive_timeout = 4;
-
           layout = "master";
         };
         input = {
@@ -42,7 +41,7 @@
           rounding = 5;
           blur = {
             enabled = true;
-            size = 1;
+            size = 3;
             passes = 1;
             ignore_opacity = true;
           };
@@ -83,8 +82,8 @@
         exec-once = [
           "${config.programs.waybar.package}/bin/waybar"
           "${config.programs.kitty.package}/bin/kitty -T Terminal"
-          "${config.programs.kitty.package}/bin/kitty -T Git --hold zsh -c 'cd ~/Nix-Dots && gitui'"
-          "${pkgs.cool-retro-term}/bin/cool-retro-term -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
+          "${config.programs.kitty.package}/bin/kitty -T Git --session git.conf"
+          "${pkgs.cool-retro-term}/bin/kitty -T Clock -p Futuristic --fullscreen -e tty-clock -bscBrn"
           "${pkgs.easyeffects}/bin/easyeffects"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"
         ];
