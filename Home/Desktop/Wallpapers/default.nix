@@ -2,6 +2,7 @@
 {config, pkgs, lib, ...}:{
   home.packages = with pkgs; [
     swww #Wallpaper support for wayland
+    #swaybg #uncomment to enable swaybg
 
     #Script for wallpaper(you can use it choose between sway and swww depending on your setup)
     (pkgs.writeShellScriptBin "wall-script" ''
