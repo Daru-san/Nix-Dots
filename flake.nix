@@ -15,56 +15,38 @@
       url = github:hyprwm/Hyprland;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config
+    #nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config(disabled for the time being)
   };
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    spicetify-nix,
-    hyprland,
-    nur,
-    nix-doom-emacs,
-    ...
-  } @ inputs: let
-    username = "daru";
-    supportedSystems = [
-      "x86_64-linux"
-    ];
-    genSystems = nixpkgs.lib.genAttrs supportedSystems;
-    pkgs = genSystems (system: import nixpkgs {inherit system;});
-    modules = [
-        hyprland.homeManagerModules.default #Enable Hyprland
-        {wayland.windowManager.hyprland.enable = true;}
-        {nixpkgs.overlays = [ nur.overlay ];}
-    ];
-    config = {
-      allowUnfree = true;
-    };
-    stateVersion = "unstable";
-  in {
-    packages = genSystems (system: {
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgs.${system};
+    outputs = { 
+      nixpkgs, 
+      home-manager,
+      hyprland,
+      nur,
+      spicetify-nix,
+      ...} @ inputs: let     
+        
+        config = {
+          allowUnfree = true;
+        };
+
+        stateVersion = "unstable";
+
         modules = [
-          ./Home/default.nix #Add home config
+          hyprland.homeManagerModules.default #Enable Hyprland
+          {wayland.windowManager.hyprland.enable = true;}
           {nixpkgs.overlays = [ nur.overlay ];}
-          {imports = [
-            nix-doom-emacs.hmModule
-          ];
-           programs.doom-emacs = {
-            enable = false; #Disable for now to be re-enabled later on
-            doomPrivateDir = ./Home/Programs/cli/emacs/doom.d;
-            };
-          }
         ];
-        extraSpecialArgs =
-          inputs
-          // {
-            inherit username hyprland nix-doom-emacs;
-          };
+
+        pkgs = import nixpkgs { system = "x86_64-linux"; };
+
+    in {
+      homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix;};
+        modules = [
+          ./Home/default.nix
+        ];
       };
-    });
-  };
+    };
 }
 
