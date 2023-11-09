@@ -1,10 +1,17 @@
-{pkgs, lib, config, ...}:{
-  home.file.".mozilla/firefox/daru/chrome".source = config.lib.file.mkOutOfStoreSymlink ./chrome;
+{pkgs, lib, config, ...}: let
+    firefoxOne = pkgs.fetchgit {
+      url = "https://github.com/Godiesc/firefox-one";
+      rev = "974fee10ce0ebc9b4025b90bb18d05d74c46230f";
+      sha256 = "0q4n013iinli1x9s2jwi091wi5qmmqxhljg7sk6sk5fsd6kzvn5p";
+    };
+    user = "daru";
+  in {
+  home.file.".mozilla/firefox/${user}/chrome".source = "${firefoxOne}/chrome";
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
     profiles = {
-      daru = {
+      ${user} = {
         #Name
         name = "daruFox";
 
