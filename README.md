@@ -34,6 +34,7 @@ My NixOS configuration featuring flakes and Hyprland
 <b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview3.png" width=900px></b>
 <b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview4.png" width=900px></b>
 <b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview5.png" width=900px></b>
+<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview6.png" width=900px></b>
 </p>
 <b>
     <h3>TODO:</h3>
