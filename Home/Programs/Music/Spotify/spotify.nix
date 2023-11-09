@@ -38,7 +38,7 @@ in
           "xpui.js_repl_8008" = ",$1}32,";
         };
       };
-      colorScheme = "Dracula";
+      colorScheme = "Kanagawa";
       # customColorScheme = {
       #   accent = "76946A";
       #   accent-active = "98BB6C";
