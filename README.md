@@ -41,7 +41,7 @@ My NixOS configuration featuring flakes and Hyprland
     <ul>
         <li>Finish Neovim config with NvChad</li>
         <li>Add rofi wifi menu</li>
-        <li>Finish firefoxone config</li>
+        <li>Complete wallpaper config with global variables</li>
         <li>Update the theme</li>
         <li>Implement theme switching</li>
         <li>Redo rofi config</li>
