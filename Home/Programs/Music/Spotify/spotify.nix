@@ -38,7 +38,22 @@ in
           "xpui.js_repl_8008" = ",$1}32,";
         };
       };
-      colorScheme = "Kanagawa";
+      colorScheme = "Dracula";
+      # customColorScheme = {
+      #   accent = "76946A";
+      #   accent-active = "98BB6C";
+      #   accent-inactive = "1F1F28";
+      #   banner = "98BB6C";
+      #   border-active = "98BB6C";
+      #   border-inactive = "2A2A37";
+      #   header = "54546D";
+      #   highlight = "363646";
+      #   main = "1F1F28";
+      #   notification = "7E9CD8";
+      #   notification-error = "E82424";
+      #   subtext = "C8C093";
+      #   text = "DCD7BA";
+      # };
 
       enabledExtensions = with spicePkgs.extensions; [
 #Extensions for spicetify
