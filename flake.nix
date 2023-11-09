@@ -44,7 +44,6 @@
         extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix;};
         modules = [
           ./Home/default.nix
-          ./Wallpapers/default.nix
           {nixpkgs.overlays = [ nur.overlay ];}
         ];
       };

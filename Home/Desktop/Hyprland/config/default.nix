@@ -71,8 +71,11 @@
             "fade, 1, 7, myBezier"
           ];
         };
-        exec = [
-          "zsh -c 'wall-script -w ${config.wall-program} -i ${config.wallpaper}'" #Wallpaper script, calling variables from wallpaper.nix file
+        exec = let
+          wall-program = "swww";
+          wallpaper = "~/Wallpapers/plant.png";
+        in [
+          "zsh -c 'wall-script -w ${wall-program} -i ${wallpaper}'" #Wallpaper script, calling variables from wallpaper.nix file
           "${pkgs.swaynotificationcenter}/bin/swaync"
         ];
         exec-once = [
