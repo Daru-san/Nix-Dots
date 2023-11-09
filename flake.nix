@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable; #Pin to nixpkgs unstable
     nur.url = github:nix-community/NUR; #Add nur repo for firefox plugins
-    spicetify-nix.url = github:the-argus/spicetify-nix; #Add spicetify to flake
+    spicetify-nix.url = github:the-argus/spicetify-nix/master; #Add spicetify to flake
     home-manager = {
       url = github:nix-community/home-manager/master;
       # home manager use our nixpkgs and not its own
