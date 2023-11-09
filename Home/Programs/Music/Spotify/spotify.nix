@@ -13,6 +13,7 @@ in
 
   # configure spicetify :)
   programs.spicetify = let
+    #Import officialThemes since 'text isn't provided by default
     officialThemes = pkgs.fetchgit {
       url = "https://github.com/spicetify/spicetify-themes";
       sha256 = "0sab8jh4867fh66zdz7msg1bwwqpm0zc6y20hw7328p7agcr7xlk";
