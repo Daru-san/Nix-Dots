@@ -5,6 +5,7 @@
     ./tty-init.nix
     ./fonts.nix
     ./rules.nix
+    ../../Wallpapers/default.nix
   ];
   wayland.windowManager.hyprland = {
       enable = true;
@@ -71,13 +72,11 @@
             "fade, 1, 7, myBezier"
           ];
         };
-        exec = 
-        let
-          #These are for the script, you can change them
-          wallpaper = "~/Wallpapers/images/plant.png"; #change this to the wallpaper directory
-          program = "swww"; #You can choose between swww and swaybg for wallpapers (You need to add swaybg to the config if so)
+        exec = let
+          wall-program = "swww";
+          wallpaper = "${wallpapers}/images/plant.png";
         in [
-          "zsh -c 'wall-script -w ${program} -i ${wallpaper}'" #Wallpaper script
+          "zsh -c 'wall-script -w ${wall-program} -i ${wallpaper}'" #Wallpaper script, calling variables from wallpaper.nix file
           "${pkgs.swaynotificationcenter}/bin/swaync"
         ];
         exec-once = [

@@ -1,5 +1,12 @@
 #Wallpaper config
-{config, pkgs, lib, ...}:{
+{config, pkgs, lib, ...}: let
+  #Set wallpapers from https://github.com/D3Ext/aesthetic-wallpapers
+  wallpapers = pkgs.fetchgit {
+    url = "https://github.com/D3Ext/aesthetic-wallpapers";
+    rev = "f1a4270055bdb7856e127553db3f420";
+    sha256 = "09cc87qywwvx44ajbnjg2v0jzp05ymgnmfm0b45qqdxqlamx5034";
+  };
+in {
   home.packages = with pkgs; [
     swww #Wallpaper support for wayland
     #swaybg #uncomment to enable swaybg
@@ -46,13 +53,6 @@
      '')
   ];
 #Clone wallpapers repo 'github.com/D3Ext/aesthetic-wallpapers'
-  home.file."Wallpapers" = {
-    recursive = true;
-    source = pkgs.fetchFromGitHub {
-      owner = "D3Ext";
-      repo = "aesthetic-wallpapers";
-      rev = "9925e5c764e68ddaaecff6afb0991d80939ec1f9";
-      sha256 = "u6QzTa5VScOZHbO/5WRORjbuQoCA5C774f1z1TTH87k=";
-    };
-  };
+  home.file."Wallpapers".source = "${wallpapers}/images";
+
 }
