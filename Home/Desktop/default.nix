@@ -1,6 +1,6 @@
 {config, ...}:{
   imports = [
     ./Hyprland/default.nix
-    # ./Wallpapers/default.nix
+    ./Wallpapers/default.nix
   ];
 }
