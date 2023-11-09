@@ -53,6 +53,8 @@ in {
      '')
   ];
 #Clone wallpapers repo 'github.com/D3Ext/aesthetic-wallpapers'
-  home.file."Wallpapers".source = "${wallpapers}/images";
-
+  home.file."Wallpapers" = {
+    source = "${wallpapers}/images";
+    recursive = true;
+  };
 }
