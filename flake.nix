@@ -34,7 +34,6 @@
         modules = [
           hyprland.homeManagerModules.default #Enable Hyprland
           {wayland.windowManager.hyprland.enable = true;}
-          {nixpkgs.overlays = [ nur.overlay ];}
         ];
 
         pkgs = import nixpkgs { system = "x86_64-linux"; };
@@ -45,6 +44,7 @@
         extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix;};
         modules = [
           ./Home/default.nix
+          {nixpkgs.overlays = [ nur.overlay ];}
         ];
       };
     };
