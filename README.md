@@ -12,7 +12,7 @@ My NixOS configuration featuring flakes and Hyprland
 #### My personal NixOS, home manager config using flakes and Hyprland ####
 
     
-### Main programs ###
+## Main programs ##
 
 * Desktop: Hyprland
 * Browser: Firefox
@@ -26,8 +26,13 @@ My NixOS configuration featuring flakes and Hyprland
 * Audio effects: EasyEffects
 * File manager: Nautilus/Ranger
 
+## Note ##
+* This is a home configuration, not a system one. I do not manage home-manager with configuration.nix
+* This configuration is relatively easy to copy for yourself but will need some editing to get it working properly, all paths are relative to the username
+* I don't recommend directly copying my configs as they are but rather using them as reference
+    * This is just because you would need to get used to my _convoluted_ environment
 
-Previews
+Screenshots
 -----------
 ![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview.png "Example with terminal")
 ![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview2.png "Neovim with NvChad")
@@ -57,6 +62,7 @@ This is a small roadmap of where these configs are going
 - [ ] Add custom pkgs for mangayomi and whatsie
 - [ ] Create deploy script
 - [ ] Add system flake
+- [ ] Add global variables and configs
 
 
 ### In Progress
