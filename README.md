@@ -1,54 +1,87 @@
-# Nix-Dots
+Nix-Dots
+===========
+
 My NixOS configuration featuring flakes and Hyprland
 
 <p align="center"><img src="https://i.imgur.com/X5zKxvp.png" width=300px></p>
 <p align="center">
     <img src="https://img.shields.io/static/v1?label=Hyprland&message=Stable&style=flat&logo=hyprland&colorA=24273A&colorB=8AADF4&logoColor=CAD3F5"/>
-    <img src="https://img.shields.io/static/v1?label=Nix Flake&message=Check&style=flat&logo=nixos&colorA=24273A&colorB=9173ff&logoColor=CAD3F5">
-  
+    <img src="https://img.shields.io/static/v1?label=Nix Flake&message=Check&style=flat&logo=nixos&colorA=24273A&colorB=9173ff&logoColor=CAD3F5"
 </p>
-<b>
-    My personal NixOS, home manager config using flakes and Hyprland
-    <br>
-    <h3>
-        Main programs
-    </h3>
-    <ul>
-        <li>Desktop: Hyprland</li>
-        <li>Browser: Firefox</li>
-        <li>Launcher: rofi</li>
-        <li>Bar: waybar</li>
-        <li>Terminal: kitty</li>
-        <li>Shell: zsh</li>
-        <li>Music: Spicetify</li>
-        <li>Editor: Neovim(NvChad)</li>
-        <li>System monitor: Btop</li>
-        <li>Audio effects: EasyEffects</li>
-        <li>File manager: Nautilus/Ranger</li>
-    </ul>
-</b>
-<h1>Previews</h1>
-<p align="center">
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview2.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview3.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview4.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview5.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview6.png" width=900px></b>
-<b align="center"><img src="https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview7.png" width=900px></b>
-</p>
-<b>
-    <h3>TODO:</h3>
-    <ul>
-        <li>Finish Neovim config with NvChad</li>
-        <li>Add rofi wifi menu</li>
-        <li>Complete wallpaper config with global variables</li>
-        <li>Update the theme</li>
-        <li>Implement theme switching</li>
-        <li>Redo rofi config</li>
-        <li>Set up eww widgets</li>
-        <li>Finish documentation</li>
-        <li>Add custom shells for specific languages</li>
-        <li>Migrate to cli/tui programs</li>
-    </ul>
-</b>
+    
+#### My personal NixOS, home manager config using flakes and Hyprland ####
+
+    
+## Main programs ##
+
+* Desktop: Hyprland
+* Browser: Firefox
+* Launcher: rofi _wayland_
+* Bar: waybar
+* Terminal: kitty
+* Shell: zsh - _Oh-my-zsh_
+* Music: Spotify - _Spicetify_
+* Editor: Neovim - _NvChad_
+* System monitor: Btop++
+* Audio effects: EasyEffects
+* File manager: Nautilus/Ranger
+
+## Note ##
+* This is a home configuration, not a system one. I do not manage home-manager with configuration.nix
+* This configuration is relatively easy to copy for yourself but will need some editing to get it working properly, all paths are relative to the username
+* I don't recommend directly copying my configs as they are but rather using them as reference
+    * This is just because you would need to get used to my _convoluted_ environment
+
+Screenshots
+-----------
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview.png "Example with terminal")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview2.png "Neovim with NvChad")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview3.png "Neovim")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview4.png "Rofi drun")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview5.png "'Task manager'")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview6.png "Power menu")
+![picture alt](https://github.com/0LaMica/Nix-Dots/blob/main/assets/preview7.png "My goat on Linux")
+
+<hr>
+
+
+
+
+TODO
+------
+
+This is a small roadmap of where these configs are going
+
+### Todo
+
+- [ ] Implement theme switching
+- [ ] Set up eww widgets
+- [ ] Redo rofi config
+- [ ] Add custom shells for specific languages
+- [ ] Add configs for sway
+- [ ] Add custom pkgs for mangayomi and whatsie
+- [ ] Create deploy script
+- [ ] Add system flake
+- [ ] Add global variables and configs
+
+
+### In Progress
+
+- [ ] Finish Neovim config with NvChad
+    - [x] Add the repo to config
+    - [ ] Get plugins to work properly 
+- [ ] Complete wallpaper config with global variables
+    - [x] Add repo
+    - [ ] Update wallpaper script _wall-script_
+    - [ ] Add set wallpaper as a global config variable 
+- [ ] Finish documentation
+- [ ] Add Minecraft to packages
+    - [x] Set up prism-launcher
+        - [ ] Remove account verification
+    - [ ] Set up default launcher   
+
+### Done ✓
+
+- [x] Complete firefoxone config
+- [x] Complete ranger plugins
+- [x] Set up spicetify  

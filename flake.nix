@@ -15,6 +15,10 @@
       url = github:hyprwm/Hyprland;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland-contrib = {
+      #Hyprland-contrib for hyprland specific packages
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
     #nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config(disabled for the time being)
   };
     outputs = { 
@@ -23,6 +27,7 @@
       hyprland,
       nur,
       spicetify-nix,
+      hyprland-contrib,
       ...} @ inputs: let     
         
         config = {
@@ -41,7 +46,7 @@
     in {
       homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix;};
+        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib;};
         modules = [
           ./Home/default.nix
           {nixpkgs.overlays = [ nur.overlay ];}
