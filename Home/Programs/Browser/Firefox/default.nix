@@ -176,8 +176,8 @@
           #Firefox-one configs
           "firefoxone.rhythm_sound_tab" = true;
           "firefoxone.selected_tab_gradient_border" = true;
-          "firefoxone.style_without_leftsidebar" = true;
-          "firefoxone.tree_tabs_style" = true;
+          "firefoxone.style_without_leftsidebar" = false;
+          "firefoxone.tree_tabs_style" = false;
           "firefoxone.without-default-colors" = true;
           "firefoxone.main-image" = false;
         };
