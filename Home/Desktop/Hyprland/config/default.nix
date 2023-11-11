@@ -5,6 +5,7 @@
     ./tty-init.nix
     ./fonts.nix
     ./rules.nix
+    ./custom-hypr.nix  
   ];
   wayland.windowManager.hyprland = {
       enable = true;
