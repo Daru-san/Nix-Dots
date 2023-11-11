@@ -39,7 +39,7 @@ in
           "xpui.js_repl_8008" = ",$1}32,";
         };
       };
-      colorScheme = "Kanagawa";
+      colorScheme = "Spotify";
       # customColorScheme = {
       #   accent = "76946A";
       #   accent-active = "98BB6C";

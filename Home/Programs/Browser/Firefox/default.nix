@@ -6,7 +6,10 @@
     };
     user = "daru";
   in {
-  home.file.".mozilla/firefox/${user}/chrome".source = "${firefoxOne}/chrome";
+  home.file.".mozilla/firefox/${user}/chrome" = {
+    source = "${firefoxOne}/chrome";
+    recursive = true;
+  };
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
@@ -106,7 +109,7 @@
               urls = [
                 {template = "https://www.startpage.com/sp/search?query={searchTerms}";}
               ];
-              icon = " https://www.startpage.com/sp/cdn/favicons/favicon--default.ico";
+              icon = "https://www.startpage.com/sp/cdn/favicons/favicon--default.ico";
               definedAliases = ["@sp"];
             };
           };
@@ -131,7 +134,7 @@
           "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           "browser.search.suggest.enabled" = false;
-          "browser.toolbars.bookmarks.visibility" = "never";
+          "browser.toolbars.bookmarks.visibility" = "always";
           "browser.tabs.warnOnClose" = true;
           "browser.startup.page" = 3;
           "browser.translations.panelShown" = true;
