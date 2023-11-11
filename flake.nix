@@ -20,6 +20,7 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     #nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config(disabled for the time being)
   };
     outputs = { 
@@ -34,7 +35,9 @@
         config = {
           allowUnfree = true;
         };
-
+        overlays = [
+          inputs.neovim-nightly-overlay.overlay
+        ];
         stateVersion = "unstable";
 
         modules = [
@@ -51,6 +54,7 @@
         modules = [
           ./Home/default.nix
           {nixpkgs.overlays = [ nur.overlay ];}
+          {nixpkgs.overlays = overlays;}
         ];
       };
     };
