@@ -19,6 +19,7 @@
       #Hyprland-contrib for hyprland specific packages
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
     #nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config(disabled for the time being)
   };
     outputs = { 
