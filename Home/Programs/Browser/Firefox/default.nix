@@ -6,15 +6,24 @@
     };
     user = "daru";
   in {
-  home.file.".mozilla/firefox/${user}/chrome" = {
+    nixpkgs.overlays =
+  let
+    # Change this to a rev sha to pin
+    moz-rev = "master";
+    moz-url = builtins.fetchTarball { url = "https://github.com/mozilla/nixpkgs-mozilla/archive/${moz-rev}.tar.gz";};
+    nightlyOverlay = (import "${moz-url}/firefox-overlay.nix");
+  in [
+    nightlyOverlay
+  ];
+  home.file.".mozilla/firefox/daru/chrome" = {
     source = "${firefoxOne}/chrome";
     recursive = true;
   };
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox;
+    package = pkgs.latest.firefox-nightly-bin;
     profiles = {
-      ${user} = {
+      daru = {
         #Name
         name = "daruFox";
 
