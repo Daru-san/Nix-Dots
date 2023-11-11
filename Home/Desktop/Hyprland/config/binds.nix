@@ -48,7 +48,7 @@ in {
       "SUPERALT,caps_lock,togglespecialworkspace,mink"
       "SUPER,a,togglespecialworkspace,audio"
 
-      "SUPERSHIFT,P,exec,kitty -T SystemMonitor --session SystemMonitor.conf" ##Launch task-manager like ui for process control
+      "SUPERSHIFT,P,exec,hdrop 'kitty -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
 
       #Super+tab to move to next workspace and back
       "SUPER,TAB,workspace,m+1"

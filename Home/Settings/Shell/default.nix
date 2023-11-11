@@ -10,9 +10,6 @@
   home.shellAliases = {
     g = "git";
     ll = "ls -l";
-    update = "sudo nixos-rebuild switch";
-    home-switch = "home-manager switch";
-    nvhome = "nvim ~/.config/home-manager/home.nix";
     ex = "exit";
     cat = "ccat";    
     logout = "loginctl terminate-user $USER";
@@ -31,20 +28,16 @@
     img = "kitten icat --hold";
     r = "ranger";
     home-flake = "home-manager switch --flake ~/Nix-Dots --impure";
-    Anime = "kitty -T Anime --hold ani-cli --rofi";
-    Music = "Kitty -T Music --hold cmus";
     nix-upgrade = "sudo nixos-rebuild switch --upgrade-all";
     nix-upgrade-full = "sudo nixos-rebuild switch --upgrade-all && home-flake";
     cdots = "cd ~/Nix-Dots/";
     cdownl = "cd ~/Downloads/";
     cdocs = "cd ~/Documents/";
-    cwalls = "cd ~/Wallpapers/images/";
+    cwalls = "cd ~/Wallpapers/";
     ani = "ani-cli --rofi --vlc";
     anidu = "ani-cli  --rofi --vlc --dub";
     anid = "ani-cli -d";
     anidud = "ani-cli --dub -d";
-    firefox = "/run/current-system/sw/bin/firefox";
-    Hyprland = "/run/current-system/sw/bin/Hyprland";
     rebootf = "sudo systemctl reboot -f";
   };
 }
