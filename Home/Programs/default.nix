@@ -11,6 +11,7 @@
     libreoffice-fresh
     obsidian
     #gimp
+    pinta
     mission-center
     newsflash
     evince
