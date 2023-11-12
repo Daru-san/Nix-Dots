@@ -27,6 +27,7 @@ in {
       # "SUPERSHIFT,f,fullscreen,0"
       "SUPER,v,togglefloating"
       "SUPER, p, exec, rofi -show top"
+      "SUPER,tab, exec, rofi -show window"
 
       "SUPER,minus,splitratio,-0.25"
       "SUPERSHIFT,minus,splitratio,-0.3333333"
@@ -53,8 +54,8 @@ in {
       "SUPERSHIFT,P,exec,hdrop 'kitty -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
 
       #Super+tab to move to next workspace and back
-      "SUPER,TAB,workspace,m+1"
-      "SUPERSHIFT,TAB,workspace,m-1"
+      "ALT,TAB,workspace,m+1"
+      "ALTSHIFT,TAB,workspace,m-1"
     ] ++
     # Change workspace
     (map (n:

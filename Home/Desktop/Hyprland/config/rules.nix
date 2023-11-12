@@ -10,7 +10,7 @@
           "workspace special:taskmgr,class:(mission-center)"
           "workspace name:1,class:(kitty),title(Terminal)" 
           "workspace name:2,class:(kitty),title:(Git)"
-          "workspace name:PrivFox,class:(firefox-nightly),title:(Firefox Nightly Private Browsing)"
+          "workspace special:PrivFox,class:(firefox-nightly),title:(Firefox Nightly Private Browsing)"
           "workspace name:F11,class:(kitty),title:(Files)"
           "workspace name:F12 silent,class:(kitty),title:(Clock)"
           "fullscreen,class:(kitty),title:(Clock)"
