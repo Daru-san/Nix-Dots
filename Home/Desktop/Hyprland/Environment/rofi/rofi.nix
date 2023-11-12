@@ -3,6 +3,9 @@ let
 #Declare for style
   style = "./Themes/Styles/type-1/style-6.rasi";
 in {
+  imports = [
+    ./scripts.nix
+  ];
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland; #Set package to rofi-wayland for Hyprland
@@ -23,9 +26,7 @@ in {
   home.packages = with pkgs; [
   #Plugins that aren't directly included
     rofi-bluetooth
-    rofi-power-menu
-  ];
+     ];
   home.file.".config/rofi/colors".source = config.lib.file.mkOutOfStoreSymlink ./Themes/colors;
   home.file.".config/rofi/Themes".source = config.lib.file.mkOutOfStoreSymlink ./Themes;
-  home.file.".config/rofi/Scripts".source = config.lib.file.mkOutOfStoreSymlink ./Scripts;
 }
