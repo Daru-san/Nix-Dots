@@ -2,7 +2,9 @@
   imports = [
     ./kitty-tab-bar.nix #Import custom tab bar for kitty
   ];
-  programs.kitty = {
+  programs.kitty = let
+    page = "${pkgs.page}/bin/page";
+  in {
     enable = true;
     theme = "Adwaita darker";
     font = {
@@ -31,7 +33,7 @@
       cursor_blink_interval = 1;
       cursor_stop_blinking_after = 15;
       scrollback_lines = 100000;
-      scrollback_pager = "kitty-scroll";
+      scrollback_pager = "${page}";
     };
   };
 

@@ -1,7 +1,7 @@
 {config, ...}:{
   imports = [
     ./Themes/default.nix
-    ./Programs/default.nix
+    ./Environment/default.nix
     ./config/default.nix
   ];
 }
