@@ -15,7 +15,7 @@
         background = "'#000000'";
         foreground = "'#58D196'";
       };
-      sensitivity = 70;
+      # sensitivity = 70;
       # bars = "128";
     };
   };
