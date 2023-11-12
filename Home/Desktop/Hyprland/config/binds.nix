@@ -17,17 +17,22 @@ in {
       "SUPER,mouse:273,resizewindow"
     ];
 
-    bind = [
+    bind = let
+      swaylock = "${config.programs.swaylock.package}/bin/swaylock";
+      rofi = "${config.programs.rofi.package}/bin/rofi";
+      kitty = "${config.programs.kitty.package}/bin/kitty"
+    in [
       "alt,q,killactive"
       "SUPERSHIFT,e,exit"
-      "SUPER,x,exec,~/.config/rofi/Scripts/powermenu.sh"
+      "SUPER ,x,exec, rofi-power-menu"
+      "SUPER, l ,exec , ${swaylock} -Ff"
 
       "SUPER,s,togglesplit"
       "SUPER,f,fullscreen"
       # "SUPERSHIFT,f,fullscreen,0"
       "SUPER,v,togglefloating"
-      "SUPER, p, exec, rofi -show top"
-      "SUPER,tab, exec, rofi -show window"
+      "SUPER, p, exec, ${rofi} -show top"
+      "SUPER,tab, exec, ${rofi} -show window"
 
       "SUPER,minus,splitratio,-0.25"
       "SUPERSHIFT,minus,splitratio,-0.3333333"
@@ -51,7 +56,7 @@ in {
 
       "SUPERSHIFT,b,togglespecialworkspace,PrivFox"
 
-      "SUPERSHIFT,P,exec,hdrop 'kitty -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
+      "SUPERSHIFT,P,exec,hdrop '${kitty} -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
 
       #Super+tab to move to next workspace and back
       "ALT,TAB,workspace,m+1"
