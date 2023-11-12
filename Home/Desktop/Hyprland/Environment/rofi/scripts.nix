@@ -106,6 +106,6 @@ case $chosen in
 		run_cmd --logout
         ;;
 esac
-    '';) 
+    '') 
   ];
 }
