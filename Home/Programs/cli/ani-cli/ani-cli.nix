@@ -13,7 +13,7 @@
       case "$flag" in
          n) name=$OPTARG;;
          e) episode=$OPTARG;;
-         s) dub=$OPTARG
+         s) dub=$OPTARG;;
       esac
     done   
 
@@ -25,6 +25,7 @@
       sleep 4
       ani-cli --download -e $episode $name --$d
     '')
+
     #For anilist tracking
     anup
     
