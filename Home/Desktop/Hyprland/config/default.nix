@@ -94,7 +94,7 @@
         playerctl = "${config.services.playerctld.package}/bin/playerctl";
         playerctld = "${config.services.playerctld.package}/bin/playerctld";
         terminal = "${config.programs.kitty.package}/bin/kitty";
-        browser = "${config.programs.firefox.package}/bin/firefox";
+        browser = "${config.programs.firefox.package}/bin/firefox-nightly";
         file-manager = "${pkgs.gnome3.nautilus}/bin/nautilus";
         shotman = "${pkgs.shotman}/bin/shotman";
         editor = "${config.programs.neovim.package}/bin/nvim";
@@ -107,6 +107,7 @@
         "SUPER, Return, exec, ${terminal}"
         "SUPER, e, exec, hdrop '${file-manager}'"
         "SUPER, b, exec, ${rofi-bluetooth}"
+        "SUPERALT, b, exec, ${browser}"
         "SUPER, x, exec, ${power-menu}"
         "SUPER, r, exec, kitty --hold ranger"
         "SUPER, z, exec, kitty --hold vi"
