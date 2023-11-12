@@ -74,7 +74,7 @@
         };
         exec = let
           wall-program = "swww";
-          wallpaper = "~/Wallpapers/forest.png";
+          wallpaper = "~/Wallpapers/plant.png";
         in [
           "zsh -c 'wall-script -w ${wall-program} -i ${wallpaper}'" #Wallpaper script, calling variables from wallpaper.nix file
           "${pkgs.swaynotificationcenter}/bin/swaync"
