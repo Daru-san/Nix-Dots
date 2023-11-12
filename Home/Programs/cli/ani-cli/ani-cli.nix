@@ -3,6 +3,9 @@
 { 
   home.packages = with pkgs; [
     ani-cli
+
+    #For anilist tracking
+    anup
     
     #Dependancies
     mpv
