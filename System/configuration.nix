@@ -36,7 +36,7 @@
     enable = true;
     settings = rec {
      initial_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t --window-padding 1 -g 'Welcome to AspireNixRemux' -c /run/current-system/sw/bin/Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t --window-padding 1 -g 'Welcome to AspireNixRemux' -c Hyprland";
         user = "daru";
      };
      default_session = initial_session;
@@ -137,9 +137,9 @@
     daru = {
       isNormalUser = true;
       description = "Darryl";
-      extraGroups = [ "networkmanager" "wheel" "video" "adbusers"];
+      extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "input"];
       packages = with pkgs; [
-       firefox
+      firefox
       ];
     };
     #Disables root user
@@ -150,9 +150,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [    
+  environment.systemPackages = with pkgs; [
     neofetch
-    firefox
     ranger
     killall
     htop
@@ -180,6 +179,9 @@
     iw
     clinfo
     glxinfo
+    exfatprogs
+    nurl
+    nix-melt
   ];
 
   #Neovim config
