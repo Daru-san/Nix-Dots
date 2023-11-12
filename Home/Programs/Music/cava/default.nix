@@ -16,7 +16,7 @@
         foreground = "'#58D196'";
       };
       sensitivity = 70;
-      bars = 128;
+      # bars = "128";
     };
   };
 }
