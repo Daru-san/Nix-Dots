@@ -3,6 +3,7 @@
     ./rofi/rofi.nix
     ./kitty.nix
     ./swayosd.nix
+    ./swaylock.nix
     ./waybar.nix
     ./playerctl.nix
   ];

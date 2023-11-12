@@ -1,6 +1,7 @@
 {config, pkgs, ...}:{
   programs.swaylock = {
     enable = true;
+    package = pkgs.swaylock-effects;
     settings = {
       ignore-empty-password = true;
       font = "Jetbrains Mono Nerd Font";
