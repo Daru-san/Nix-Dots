@@ -1,18 +1,27 @@
 {
   description = "My NixOS home-manager flake, ft. Hyprland, spicetify and others ";
-  #Here's this little comment I'm gonna add here just because I can
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable; #Pin to nixpkgs unstable
-    nur.url = github:nix-community/NUR; #Add nur repo for firefox plugins
-    spicetify-nix.url = github:the-argus/spicetify-nix/master; #Add spicetify to flake
+    ##Nixpkgs inputs##
+
+    #Pin nixpkgs to unstable
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #Nur input
+    nur.url = "github:nix-community/NUR";
+
+    #Home manager input
     home-manager = {
-      url = github:nix-community/home-manager/master;
+      url = "github:nix-community/home-manager/master";
       # home manager use our nixpkgs and not its own
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #Spicetify input
+    spicetify-nix.url = "github:the-argus/spicetify-nix/master";
+
+    #Hyprland inputs
     hyprland = {
       #Add Hyprland to home config
-      url = github:hyprwm/Hyprland;
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland-contrib = {
@@ -20,8 +29,9 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #Neovim input
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    #nix-doom-emacs.url = "github:nix-community/nix-doom-emacs"; #Add doom-emacs to config(disabled for the time being)
   };
     outputs = { 
       nixpkgs, 
@@ -31,17 +41,23 @@
       spicetify-nix,
       hyprland-contrib,
       ...} @ inputs: let     
-        
+
+         #Allowing unfree packages
         config = {
           allowUnfree = true;
         };
+
+        #Overlay for neovim-nightly
         overlays = [
           inputs.neovim-nightly-overlay.overlay
         ];
+
+          #Pin to unstable
         stateVersion = "unstable";
 
         modules = [
-          hyprland.homeManagerModules.default #Enable Hyprland
+          #Enable Hyprland
+          hyprland.homeManagerModules.default
           {wayland.windowManager.hyprland.enable = true;}
         ];
 
@@ -50,13 +66,18 @@
     in {
       homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib;};
+        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib overlays;};
         modules = [
-          ./Home/default.nix
-          {nixpkgs.overlays = [ nur.overlay ];}
+          #Import home configs
+          ./Home/default.nix 
+
+          #Add nur to home outputs
+          {nixpkgs.overlays = [ nur.overlay ];} 
+
+           #Add nixpkgs overylays for neovim-nightly
           {nixpkgs.overlays = overlays;}
         ];
       };
-    };
+  };
 }
-
+#Random comment
