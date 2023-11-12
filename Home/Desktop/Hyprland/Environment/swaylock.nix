@@ -53,10 +53,10 @@
   };
   home.packages = with pkgs;
   let
-    wallpaper = ;
+    wallpaper = "~/Wallpapers/plant.png";
   in [
     (pkgs.writeShellScriptBin "lock-screen" ''
       swaylock -fF
-    '';)
+    '')
   ];
 }
