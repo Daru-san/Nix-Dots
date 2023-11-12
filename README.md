@@ -58,7 +58,6 @@ This is a small roadmap of where these configs are going
 - [ ] Set up eww widgets
 - [ ] Redo rofi config
 - [ ] Add custom shells for specific languages
-- [ ] Add configs for sway
 - [ ] Add custom pkgs for mangayomi and whatsie
 - [ ] Create deploy script
 - [ ] Add system flake
