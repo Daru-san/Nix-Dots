@@ -31,7 +31,7 @@ in {
       "SUPER,f,fullscreen"
       # "SUPERSHIFT,f,fullscreen,0"
       "SUPER,v,togglefloating"
-      "SUPER, p, exec, ${rofi} -show top"
+      "SUPER, p, exec, rofi -show top"
       "SUPER,tab, exec, ${rofi} -show window"
 
       "SUPER,minus,splitratio,-0.25"
