@@ -15,7 +15,7 @@ My NixOS configuration featuring flakes and Hyprland
 ## Main programs ##
 
 * Desktop: Hyprland
-* Browser: Firefox
+* Browser: Firefox-nightly
 * Launcher: rofi _wayland_
 * Bar: waybar
 * Terminal: kitty
@@ -67,9 +67,9 @@ This is a small roadmap of where these configs are going
 
 ### In Progress
 
-- [ ] Finish Neovim config with NvChad
+- [ ] Finish Neovim config with kickstarter.nvim
     - [x] Add the repo to config
-    - [ ] Get plugins to work properly 
+    - [ ] Move from NvChad to kickstarter  
 - [ ] Complete wallpaper config with global variables
     - [x] Add repo
     - [ ] Update wallpaper script _wall-script_
