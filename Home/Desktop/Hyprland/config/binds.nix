@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 let
   workspaces =
     (map toString (lib.range 0 9)) ++
@@ -20,7 +20,7 @@ in {
     bind = let
       swaylock = "${config.programs.swaylock.package}/bin/swaylock";
       rofi = "${config.programs.rofi.package}/bin/rofi";
-      kitty = "${config.programs.kitty.package}/bin/kitty"
+      kitty = "${config.programs.kitty.package}/bin/kitty";
     in [
       "alt,q,killactive"
       "SUPERSHIFT,e,exit"
