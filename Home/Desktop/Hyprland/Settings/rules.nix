@@ -48,6 +48,7 @@
            "float,^(nm-applet)$"
            "float,^(pavucontrol)$"
            "float,^(.blueman-manager-wrapped)$"
+           "float,^(com.github.hluk.copyq)$"
            "fullscreen,^(vlc)$"
         ];
         workspace = [
