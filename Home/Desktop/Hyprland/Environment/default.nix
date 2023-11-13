@@ -6,6 +6,8 @@
     ./swaylock.nix
     ./waybar.nix
     ./playerctl.nix
+    ./kanshi.nix
+    ./swayidle.nix
   ];
   home.packages = with pkgs; [
     wl-clipboard #Clipboard
