@@ -3,7 +3,8 @@
   imports = [
   #Import bash and zsh configs
   ./zsh/zsh.nix
-  ./bash/bash.nix 
+  ./bash/bash.nix
+  ./tmux/default.nix
   ];
 
   #Global shell aliases
