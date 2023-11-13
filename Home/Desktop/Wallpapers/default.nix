@@ -7,6 +7,10 @@
     sha256 = "09cc87qywwvx44ajbnjg2v0jzp05ymgnmfm0b45qqdxqlamx5034";
   };
 in {
+
+  imports = [
+    ./wpaperd/default.nix
+  ];
   home.packages = with pkgs; [
     swww #Wallpaper support for wayland
     #swaybg #uncomment to enable swaybg
@@ -33,6 +37,7 @@ in {
             exit 1;;
       esac
     done
+        pkill wpaperd
          if [[ $program = "swww" ]]
           then
             echo "using swww for wallpaper"

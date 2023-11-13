@@ -1,9 +1,7 @@
 #Ani cli config, terminal anime client
 {config, pkgs, ...}:
 { 
-  home.packages = with pkgs; let
-    ani-cli = "${pkgs.ani-cli}/bin/ani-cli";
-  in  [
+  home.packages = with pkgs; [
     ani-cli
 
     #Anime downloading script for ani-cli
