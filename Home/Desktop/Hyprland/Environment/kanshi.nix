@@ -8,7 +8,7 @@
       laptop = {
         outputs = [
           {
-            critera = "eDP-1";
+            criteria = "eDP-1";
           }
         ];
       };
