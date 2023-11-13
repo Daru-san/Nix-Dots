@@ -8,7 +8,7 @@
       url = "https://github.com/eromatiya/blurredfox";
       rev = "6976b5460f47bd28b4dc53bd093012780e6bfed3";
       sha256 = "Esgw5GQIfULB+G2+M2f6y/AZEBtUNg3JXGK3I/Y9RFY=";
-    }
+    };
     user = "daru";
   in {
     nixpkgs.overlays =
