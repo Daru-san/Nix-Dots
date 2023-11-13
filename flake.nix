@@ -70,10 +70,14 @@
           #Enable Hyprland
           hyprland.homeManagerModules.default
           {wayland.windowManager.hyprland.enable = true;}
+
+          anyrun.homeManagerModules.default
+          {programs.anyrun.enable = true;}
         ];
 
-        pkgs = import nixpkgs { system = "x86_64-linux"; };
-
+        pkgs = import nixpkgs { 
+          system = "x86_64-linux";
+          };
     in {
       homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
