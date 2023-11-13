@@ -17,7 +17,7 @@
       sponsorblock
       convert
       uosc
-      youtube-quality
+      quality-menu
       mpris
       autocrop
       thumbfast
