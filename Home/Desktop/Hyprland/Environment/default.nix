@@ -6,9 +6,9 @@
     ./swaylock.nix
     ./waybar.nix
     ./playerctl.nix
-    # ./kanshi.nix
+    ./kanshi.nix
     ./copyq.nix
-    ./anyrun.nix
+    # ./anyrun.nix
     ./swayidle.nix
   ];
   home.packages = with pkgs; [

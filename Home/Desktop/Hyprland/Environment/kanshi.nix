@@ -17,7 +17,7 @@
       desktop = {
         outputs = [
         {
-          criteria = "HDMI-A-1";
+          criteria = "Samsung Electric Company SyncMaster HVJZB0065";
           mode = "1920x1080@72";
           position = "0,0";
           scale = 1.0;
