@@ -3,6 +3,5 @@
     ./gtk/gtk.nix
     ./Waybar/waybar-theme.nix
     ./hypr/colors.nix
-    # ./Wallpapers/default.nix
   ];
 }

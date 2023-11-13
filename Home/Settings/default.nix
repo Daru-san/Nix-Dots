@@ -4,6 +4,8 @@
     ./Shell/default.nix
     ./pkgs/default.nix
     ./Audio/default.nix
+    ./Development/default.nix
+    ./Editor/default.nix
   ];
   home.packages = with pkgs; [
     #Add glibc for NvChad

@@ -6,6 +6,6 @@
       full = true;
       output_folder = ~/.mango;
     };
-    enableSessionWide = false;
+    enableSessionWide = true;
   };
 }

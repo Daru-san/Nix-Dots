@@ -3,8 +3,7 @@
     enable = false;
     ##Make the vscode package vscodium
     package = pkgs.vscodium;
-    keybindings = [
-      
+    keybindings = [     
     ];
 
     #The extensions

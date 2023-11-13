@@ -2,10 +2,8 @@
   
   imports = [
     ./binds.nix
-    ./tty-init.nix
     ./fonts.nix
-    ./rules.nix
-    ./custom-hypr.nix  
+    ./rules.nix  
   ];
   wayland.windowManager.hyprland = {
       enable = true;
@@ -101,17 +99,18 @@
         ranger = "${pkgs.ranger}/bin/ranger";
         power-menu = "~/.config/rofi/Scrips/powermenu.sh";
         image-editor = "${pkgs.pinta}/bin/pinta";
+        hdrop = "${inputs.hyprland-contrib.packages.${pkgs.system}.hdrop}/bin/hdrop";
       in [
         #Basic binds
         "SUPER,space,exec, ${rofi} -show drun"
         "SUPER, Return, exec, ${terminal}"
-        "SUPER, e, exec, hdrop '${file-manager}'"
+        "SUPER, e, exec, ${hdrop} '${file-manager}'"
         "SUPER, b, exec, ${rofi-bluetooth}"
-        "SUPERALT, b, exec, ${browser}"
+        "SUPERALT, b, exec, ${hdrop} '${browser}'"
         "SUPER, x, exec, ${power-menu}"
         "SUPER, r, exec, kitty --hold ranger"
         "SUPER, z, exec, kitty --hold vi"
-        "SUPER, i, exec, ${image-editor}"
+        "SUPER, i, exec, ${hdrop} '${image-editor}'"
         # Brightness control using swayosd
         ",XF86MonBrightnessUp, exec,swayosd --brightness=raise 5"
         ",XF86MonBrightnessDown, exec,swayosd --brightness=lower 5"
