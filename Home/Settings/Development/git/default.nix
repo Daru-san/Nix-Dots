@@ -1,5 +1,8 @@
 #Git config
 {config,pkgs,...}:{
+  imports = [
+    ./gitui/default.nix
+  ];
   programs.git = {
     enable = true;
     userName = "0LaMica";
@@ -15,8 +18,6 @@
     };
   };
   home.packages = with pkgs; [
-    gitui #Gitui for tui git management
-
       #Git scripts to make editing from any directory easier
       (pkgs.writeShellScriptBin "git-push" ''
          cd ~/Nix-Dots 
