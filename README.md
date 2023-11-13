@@ -29,8 +29,7 @@ My NixOS configuration featuring flakes and Hyprland
 ## Note ##
 * This is a home configuration, not a system one. I do not manage home-manager with configuration.nix
 * This configuration is relatively easy to copy for yourself but will need some editing to get it working properly, all paths are relative to the username
-* I don't recommend directly copying my configs as they are but rather using them as reference
-    * This is just because you would need to get used to my _convoluted_ environment
+* Use these configs if you're brave enough
 
 Screenshots
 -----------
