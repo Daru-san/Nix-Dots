@@ -22,7 +22,8 @@
         ];
         windowrule = [
           #Window specific worspaces
-          "workspace name:7,^(gthumb)$"
+          "workspace name:7,^(pinta)$"
+          "workspace name:8,^(pqiv)$"
           #Productivity workspaces
           "workspace name:F1,^(firefox-nightly)$"
           "workspace name:F2,^(obisidian)$"

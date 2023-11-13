@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, inputs, ... }:
 let
   workspaces =
     (map toString (lib.range 0 9)) ++
@@ -21,6 +21,7 @@ in {
       swaylock = "${config.programs.swaylock.package}/bin/swaylock";
       rofi = "${config.programs.rofi.package}/bin/rofi";
       kitty = "${config.programs.kitty.package}/bin/kitty";
+      hdrop = "${inputs.hyprland-contrib.packages.${pkgs.system}.hdrop}/bin/hdrop";
     in [
       "alt,q,killactive"
       "SUPERSHIFT,e,exit"
@@ -56,7 +57,7 @@ in {
 
       "SUPERSHIFT,b,togglespecialworkspace,PrivFox"
 
-      "SUPERSHIFT,P,exec,hdrop '${kitty} -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
+      "SUPERSHIFT,P,exec,${hdrop} '${kitty} -T SystemMonitor --session SystemMonitor.conf'" ##Launch task-manager like ui for process control
 
       #Super+tab to move to next workspace and back
       "ALT,TAB,workspace,m+1"
