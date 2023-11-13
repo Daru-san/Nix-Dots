@@ -3,7 +3,7 @@
     enable = true;
     hl = "en";
     view = true;
-    engine = "bing";
+    verbose = true;
     tl = [
       "jp"
       "af"
