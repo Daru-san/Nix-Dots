@@ -39,7 +39,7 @@
     #anyrun
     anyrun = {
       url = "github:Kirottu/anyrun";
-      anyrun.inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
     outputs = { 
