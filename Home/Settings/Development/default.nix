@@ -1,7 +1,7 @@
 {pkgs, ...}:{
   imports = [
     ./Java/default.nix
-    ./git/git.nix
+    ./git/default.nix
   ];
   home.packages = with pkgs; [
     glib
