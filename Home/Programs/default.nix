@@ -3,7 +3,7 @@
   imports = [
     ./cli/default.nix
     ./Music/default.nix
-    # ./Games/default.nix
+    ./Games/default.nix
     ./coding/default.nix
     ./Browser/default.nix
   ];

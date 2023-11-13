@@ -32,6 +32,9 @@
 
     #Neovim input
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    #Prism launcher
+    prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked";
   };
     outputs = { 
       nixpkgs, 
@@ -40,6 +43,7 @@
       nur,
       spicetify-nix,
       hyprland-contrib,
+      prismlauncher,
       ...} @ inputs: let     
 
          #Allowing unfree packages
@@ -66,7 +70,7 @@
     in {
       homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib overlays;};
+        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib overlays prismlauncher;};
         modules = [
           #Import home configs
           ./Home/default.nix 

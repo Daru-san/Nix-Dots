@@ -1,3 +1,3 @@
-{ pkgs, lib, ... }: {
-  home.packages = [ pkgs.prismlauncher-qt5 ];
+{ pkgs, lib, prismlauncher, ... }: {
+  home.packages = [ prismlauncher.packages.${pkgs.system}.prismlauncher ];
 }

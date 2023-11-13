@@ -1,0 +1,5 @@
+{...}:{
+  imports = [
+    ./Minecraft/default.nix
+  ];
+}
