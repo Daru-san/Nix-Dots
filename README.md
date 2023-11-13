@@ -56,7 +56,6 @@ This is a small roadmap of where these configs are going
 
 - [ ] Implement theme switching
 - [ ] Set up eww widgets
-- [ ] Redo rofi config
 - [ ] Add custom shells for specific languages
 - [ ] Add custom pkgs for mangayomi and whatsie
 - [ ] Create deploy script
@@ -71,16 +70,16 @@ This is a small roadmap of where these configs are going
     - [ ] Move from NvChad to kickstarter  
 - [ ] Complete wallpaper config with global variables
     - [x] Add repo
-    - [ ] Update wallpaper script _wall-script_
+    - [x] Update wallpaper script _wall-script_
     - [ ] Add set wallpaper as a global config variable 
-- [ ] Finish documentation
-- [ ] Add Minecraft to packages
-    - [x] Set up prism-launcher
-        - [ ] Remove account verification
-    - [ ] Set up default launcher   
+- [ ] Finish documentation   
+- [ ] Redo rofi config
+   - [x] Set up custom shell scripts
+   - [ ] Set up custom themes
 
 ### Done ✓
 
 - [x] Complete firefoxone config
 - [x] Complete ranger plugins
 - [x] Set up spicetify  
+- [x] Set up Minecraft
