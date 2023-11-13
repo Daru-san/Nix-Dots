@@ -28,9 +28,5 @@
 
     #For anilist tracking
     anup
-    
-    #Dependancies
-    mpv
-    vlc
   ];
 }

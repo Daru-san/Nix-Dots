@@ -7,6 +7,7 @@
       ./neofetch/neofetch.nix
       ./yt-dlp/yt-dlp.nix
       ./ani-cli/ani-cli.nix
+      ./translate-shell/default.nix
     ];
     home.packages = with pkgs; [
       hello #Hi there
@@ -20,8 +21,6 @@
       ddgr #Searching in the terminal
       losslesscut-bin #Editing videos
       speedtest-cli #Internet speed test
-      lynx #Terminal browser
-      w3m #Also a terminal browser and terminal image viewer
       chroma #For cat coloring
       glow #Markdown editor
       gping #Ping with graphics
@@ -33,8 +32,6 @@
       chafa 
       calcure  
       browsh
-      translate-shell
-      tmux
       krabby
       yafetch
     ];
