@@ -23,6 +23,10 @@
           "catimg" 
           "jump" 
           "extract"
+          "web-search"
+          "colored-man-pages"
+          "copypath"
+          "copyfile"
           ];
         #Theme
         theme = "muse";
