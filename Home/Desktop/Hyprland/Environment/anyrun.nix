@@ -1,4 +1,4 @@
-{pkgs, anyrun, ...}:{
+{pkgs, anyrun, inputs, ...}:{
   programs.anyrun = {
     enable = true;
     config = {
