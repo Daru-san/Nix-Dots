@@ -1,7 +1,9 @@
 #Ani cli config, terminal anime client
 {config, pkgs, ...}:
 { 
-  home.packages = with pkgs; [
+  home.packages = with pkgs; let
+    ani-cli = "${pkgs.ani-cli}/bin/ani-cli";
+  in  [
     ani-cli
 
     #Anime downloading script for ani-cli
@@ -23,7 +25,7 @@
       sleep 1
       echo 'Downloading $name, episode(s) $episode...'      
       sleep 4
-      ani-cli --download -e $episode $name --$d
+      ${ani-cli} --download -e $episode $name --$d
     '')
 
     #For anilist tracking
