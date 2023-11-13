@@ -4,6 +4,11 @@
       rev = "974fee10ce0ebc9b4025b90bb18d05d74c46230f";
       sha256 = "0q4n013iinli1x9s2jwi091wi5qmmqxhljg7sk6sk5fsd6kzvn5p";
     };
+    blurredfox = pkgs.fetchgit {
+      url = "https://github.com/eromatiya/blurredfox";
+      rev = "6976b5460f47bd28b4dc53bd093012780e6bfed3";
+      sha256 = "Esgw5GQIfULB+G2+M2f6y/AZEBtUNg3JXGK3I/Y9RFY=";
+    }
     user = "daru";
   in {
     nixpkgs.overlays =
@@ -15,15 +20,15 @@
   in [
     nightlyOverlay
   ];
-  home.file.".mozilla/firefox/daru/chrome" = {
-    source = "${firefoxOne}/chrome";
+  home.file.".mozilla/firefox/${user}/chrome" = {
+    source = "${blurredfox}";
     recursive = true;
   };
   programs.firefox = {
     enable = true;
     package = pkgs.latest.firefox-nightly-bin;
     profiles = {
-      daru = {
+      ${user} = {
         #Name
         name = "daruFox";
 
