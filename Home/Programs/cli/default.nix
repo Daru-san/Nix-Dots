@@ -3,11 +3,9 @@
     imports = [
       #Programs that have specialized modules
       ./ranger/ranger.nix
-      ./neovim/nvim.nix
       ./btop/btop.nix 
       ./neofetch/neofetch.nix
       ./yt-dlp/yt-dlp.nix
-      ./git/git.nix
       ./ani-cli/ani-cli.nix
     ];
     home.packages = with pkgs; [
