@@ -1,0 +1,5 @@
+{...}:{
+  imports = [
+    ./keepassxc/default.nix
+  ];
+}
