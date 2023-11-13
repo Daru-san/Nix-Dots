@@ -6,9 +6,7 @@
     ./Audio/default.nix
     ./Development/default.nix
     ./Editor/default.nix
-  ];
-  home.packages = with pkgs; [
-    #Add glibc for NvChad
-    glib
+    ./Security/default.nix
+    ./Directories/default.nix
   ];
 }
