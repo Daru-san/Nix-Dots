@@ -6,10 +6,6 @@
       view = true;
       engine = "bing";
       verbose = true;
-      tl = [
-        "jp"
-        "af"
-      ];
     };
   };
 }
