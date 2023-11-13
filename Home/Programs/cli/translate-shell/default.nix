@@ -1,12 +1,15 @@
 {pkgs, ...}:{
   programs.translate-shell = {
     enable = true;
-    hl = "en";
-    view = true;
-    verbose = true;
-    tl = [
-      "jp"
-      "af"
-    ];
+    settings = {
+      hl = "en";
+      view = true;
+      engine = "bing";
+      verbose = true;
+      tl = [
+        "jp"
+        "af"
+      ];
+    };
   };
 }
