@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, config, ...}:{
     #Set up swayidle
     services.swayidle = {
     enable = true;
