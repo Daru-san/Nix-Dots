@@ -35,6 +35,12 @@
 
     #Prism launcher
     prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked";
+
+    #anyrun
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      anyrun.inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
     outputs = { 
       nixpkgs, 
@@ -44,6 +50,7 @@
       spicetify-nix,
       hyprland-contrib,
       prismlauncher,
+      anyrun,
       ...} @ inputs: let     
 
          #Allowing unfree packages
@@ -70,7 +77,7 @@
     in {
       homeConfigurations."daru" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib overlays prismlauncher;};
+        extraSpecialArgs = {inherit inputs hyprland nur spicetify-nix hyprland-contrib overlays prismlauncher anyrun;};
         modules = [
           #Import home configs
           ./Home/default.nix 
