@@ -84,6 +84,7 @@
           "${pkgs.cool-retro-term}/bin/kitty -T Clock --hold tty-clock -bscBrn"
           "${pkgs.easyeffects}/bin/easyeffects"
           "${pkgs.networkmanagerapplet}/bin/nm-applet"
+          "${config.services.copyq.package}/bin/copyq"
         ];
         bind = let
         swayosd = "${config.services.swayosd.package}/bin/swayosd";
