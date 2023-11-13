@@ -9,6 +9,11 @@
       rev = "6976b5460f47bd28b4dc53bd093012780e6bfed3";
       sha256 = "Esgw5GQIfULB+G2+M2f6y/AZEBtUNg3JXGK3I/Y9RFY=";
     };
+    firefoxGX = pkgs.fetchgit {
+      url = "https://github.com/Godiesc/firefox-gx";
+      rev = "218514ac43d7ebcc254ba220a023b9d3cd0b586a";
+      sha256 = "BqSBrAZlNYiXl2DxSclPR37oLIHu786XxOsQhnJyfFw=";
+    };
     user = "daru";
   in {
     nixpkgs.overlays =
@@ -21,7 +26,7 @@
     nightlyOverlay
   ];
   home.file.".mozilla/firefox/${user}/chrome" = {
-    source = "${blurredfox}";
+    source = "${firefoxGX}/chrome";
     recursive = true;
   };
   programs.firefox = {
