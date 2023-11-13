@@ -33,14 +33,8 @@
 
   #Theme symlinks 
   home.file.".mozilla/firefox/${user}/chrome" = {
-    source = "${firefoxGX}/chrome";
+    source = "${firefoxOne}/chrome";
     recursive = true;
-  };
-  home.file.".mozilla/firefox/${user}/chrome/ogx_containers.css" = {
-    source = "${firefoxGX}/Extras/Classic-Sound-icon/ogx_containers.css";
-  };
-  home.file.".mozilla/firefox/${user}/chrome/ogx_sound.css" = {
-    source = "${firefoxGX}/Extras/Classic-Sound-icon/ogx_sound.css";
   };
 
   programs.firefox = {
@@ -210,7 +204,7 @@
           
           #Firefoxgx configs
           "firefoxgx.left-sidebar" = true;
-          "firefoxgx.main-image" = true;
+          "firefoxgx.main-image" = false;
         };
       };
     };
