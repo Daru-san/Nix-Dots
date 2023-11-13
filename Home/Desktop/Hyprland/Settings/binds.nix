@@ -22,11 +22,13 @@ in {
       rofi = "${config.programs.rofi.package}/bin/rofi";
       kitty = "${config.programs.kitty.package}/bin/kitty";
       hdrop = "${inputs.hyprland-contrib.packages.${pkgs.system}.hdrop}/bin/hdrop";
+      copyq = "${config.services.copyq.package}/bin/copyq";
     in [
       "alt,q,killactive"
       "SUPERSHIFT,e,exit"
       "SUPER ,x,exec, rofi-power-menu"
       "SUPER, l ,exec , ${swaylock} -Ff"
+      "SUPERSHIFT, v, exec, ${copyq} menu"
 
       "SUPER,s,togglesplit"
       "SUPER,f,fullscreen"
