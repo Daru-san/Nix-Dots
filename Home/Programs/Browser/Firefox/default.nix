@@ -1,4 +1,6 @@
 {pkgs, lib, config, ...}: let
+
+    #Import custom css themes from github
     firefoxOne = pkgs.fetchgit {
       url = "https://github.com/Godiesc/firefox-one";
       rev = "974fee10ce0ebc9b4025b90bb18d05d74c46230f";
@@ -14,7 +16,10 @@
       rev = "218514ac43d7ebcc254ba220a023b9d3cd0b586a";
       sha256 = "BqSBrAZlNYiXl2DxSclPR37oLIHu786XxOsQhnJyfFw=";
     };
+
     user = "daru";
+
+  #Firefox-nightly overlay setup
   in {
     nixpkgs.overlays =
   let
@@ -25,13 +30,25 @@
   in [
     nightlyOverlay
   ];
+
+  #Theme symlinks 
   home.file.".mozilla/firefox/${user}/chrome" = {
     source = "${firefoxGX}/chrome";
     recursive = true;
   };
+  home.file.".mozilla/firefox/${user}/chrome/ogx_containers.css" = {
+    source = "${firefoxGX}/Extras/Classic-Sound-icon/ogx_containers.css";
+  };
+  home.file.".mozilla/firefox/${user}/chrome/ogx_sound.css" = {
+    source = "${firefoxGX}/Extras/Classic-Sound-icon/ogx_sound.css";
+  };
+
   programs.firefox = {
     enable = true;
+
+    #Package, firefox-nightly
     package = pkgs.latest.firefox-nightly-bin;
+
     profiles = {
       ${user} = {
         #Name
@@ -190,6 +207,10 @@
           "firefoxone.tree_tabs_style" = false;
           "firefoxone.without-default-colors" = true;
           "firefoxone.main-image" = false;
+          
+          #Firefoxgx configs
+          "firefoxgx.left-sidebar" = true;
+          "firefoxgx.main-image" = true;
         };
       };
     };
