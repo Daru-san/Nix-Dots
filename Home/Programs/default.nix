@@ -3,8 +3,10 @@
   imports = [
     ./cli/default.nix
     ./Music/default.nix
+    ./Video/default.nix
     ./Games/default.nix
     ./Browser/default.nix
+    ./Images/default.nix
   ];
   home.packages = with pkgs; [
     libreoffice-fresh
@@ -22,7 +24,6 @@
     gthumb
     scrcpy
     localsend
-    keepassxc
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
