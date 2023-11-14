@@ -27,6 +27,8 @@ My NixOS configuration featuring flakes and Hyprland
 * File manager: Nautilus/Ranger
 
 ## Note ##
+* This repo is archived, the new repo is ![SnowflakeOS](https://github.com/Daru-san/SnowflakeOS)
+* This repo has been archived since I've created a new repo that remakes everything from scratch, this repo is no longer needed
 * This is a home configuration, not a system one. I do not manage home-manager with configuration.nix
 * This configuration is relatively easy to copy for yourself but will need some editing to get it working properly, all paths are relative to the username
 * Use these configs if you're brave enough
