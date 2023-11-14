@@ -84,3 +84,4 @@ This is a small roadmap of where these configs are going
 - [x] Complete ranger plugins
 - [x] Set up spicetify  
 - [x] Set up Minecraft
+- [x] Archive this repo
